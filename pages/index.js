@@ -9,7 +9,7 @@ import { config } from '../dapp.config'
 
 export default function Home() {
   return (
-    <div className="flex flex-col w-full h-full min-h-screen overflow-hidden bg-brand-light">
+    <div className="flex flex-col w-full h-full min-h-screen overflow-hidden bg-brand-background">
       <Head>
         <title>{config.title}</title>
         <meta name="description" content={config.description} />
@@ -114,9 +114,9 @@ export default function Home() {
           </Link>
 
           <div className="flex flex-col items-center w-full mt-20 space-y-10 md:flex-row md:space-x-16">
-            {/* BlockchainHomie Image */}
+            {/* CrystalFrogs Image */}
             <img
-              src="/images/9.png"
+              src="/images/sample-frogs.gif"
               className="object-cover w-64 h-64 rounded-md"
             />
 
@@ -126,7 +126,7 @@ export default function Home() {
               </h2>
 
               <p className="mt-6 text-lg">
-                {`Crystal Frogs - Unleashing the future of anime on the blockchain. 555 unique one of one genesis pieces. Will you join the world of Axial?`}
+                {`✨5000 Crystal Frogs NFTs coming soon. Community Driven Animated Cartoon 🌱Ribbit! 🐸`}
               </p>
             </div>
           </div>
