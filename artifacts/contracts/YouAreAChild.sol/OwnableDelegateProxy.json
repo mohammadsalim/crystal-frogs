@@ -1,0 +1,10 @@
+{
+  "_format": "hh-sol-artifact-1",
+  "contractName": "OwnableDelegateProxy",
+  "sourceName": "contracts/YouAreAChild.sol",
+  "abi": [],
+  "bytecode": "0x6080604052348015600f57600080fd5b50603f80601d6000396000f3fe6080604052600080fdfea26469706673582212204852c4e94c3d1f440fe35cc4372365cf71c38d6fc753473e75b5c3e6c8a0f6ad64736f6c63430008090033",
+  "deployedBytecode": "0x6080604052600080fdfea26469706673582212204852c4e94c3d1f440fe35cc4372365cf71c38d6fc753473e75b5c3e6c8a0f6ad64736f6c63430008090033",
+  "linkReferences": {},
+  "deployedLinkReferences": {}
+}

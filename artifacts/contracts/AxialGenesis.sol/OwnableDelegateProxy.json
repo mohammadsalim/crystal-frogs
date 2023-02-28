@@ -1,0 +1,10 @@
+{
+  "_format": "hh-sol-artifact-1",
+  "contractName": "OwnableDelegateProxy",
+  "sourceName": "contracts/AxialGenesis.sol",
+  "abi": [],
+  "bytecode": "0x6080604052348015600f57600080fd5b50603f80601d6000396000f3fe6080604052600080fdfea2646970667358221220f9ceec804f4a519b8b81f5e473a5d3f22fa9ec952dd52c6e35bab43bdc711acc64736f6c63430008090033",
+  "deployedBytecode": "0x6080604052600080fdfea2646970667358221220f9ceec804f4a519b8b81f5e473a5d3f22fa9ec952dd52c6e35bab43bdc711acc64736f6c63430008090033",
+  "linkReferences": {},
+  "deployedLinkReferences": {}
+}
