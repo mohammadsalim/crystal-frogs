@@ -5,14 +5,15 @@
 
 :root {
   --font-family: 'Chewy', sans-serif;
-  --clr-light: #f0e9e9;
-  --clr-purple: #9b5de5;
+  --clr-light: ##fdfef9;
+  --clr-purple: #454393;
   --clr-pink: #f15bb5;
   --clr-yellow: #fee440;
-  --clr-blue: #00bbf9;
-  --clr-green: #00f5d4;
-  --clr-selection-bg: #cb3d92;
-  --clr-selection-text: #f4f0f0;
+  --clr-blue: #1A88FF;
+  --clr-green: #35C07D;
+  --clr-orange: #FFAC80;
+  --clr-selection-bg: #A6FF00;
+  --clr-selection-text: #121212;
   --clr-background: #ebfbff;
 
   /* Customize Wallet Modal */
@@ -60,7 +61,7 @@
 html {
   scroll-behavior: smooth;
   font-family: var(--font-family);
-  background: var(--clr-background);
+  background: var(--clr-light);
 }
 
 ::selection {

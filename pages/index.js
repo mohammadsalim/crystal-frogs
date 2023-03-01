@@ -5,7 +5,8 @@ import {
   Card, 
   Avatar, 
   Typography,
-  IconButton
+  IconButton,
+  Button
 } from "@material-tailwind/react"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {
@@ -22,13 +23,16 @@ import Frogbar from '../components/Frogbar.js'
 // images
 import Logo from '/public/images/Logo.png'
 import LogoBanner from '/public/images/logo-banner.png'
+import MintInfo from '/public/images/mint-info.gif'
+import Roadmap from '/public/images/roadmap.jpg'
+import DiscordBanner from '/public/images/discord-banner.png'
 import Roboto from '/public/images/Roboto46.png'
 
 import { config } from '../dapp.config'
 
 export default function Home() {
   return (
-    <div className="flex flex-col w-full h-full min-h-screen overflow-hidden bg-brand-background">
+    <div className="flex flex-col w-full h-full min-h-screen overflow-hidden">
       <Head>
         <title>{config.title}</title>
         <meta name="description" content={config.description} />
@@ -85,6 +89,24 @@ export default function Home() {
 
       <section className="px-4 pt-20 pb-48">
         <div className="container flex flex-col items-center mx-auto">
+        <Image
+          src={MintInfo}
+          alt="Mint"
+          />
+        </div>
+      </section>
+
+      <section className="px-4 pt-20 pb-48">
+        <div className="container flex flex-col items-center mx-auto">
+        <Image
+          src={Roadmap}
+          alt="Roadmap"
+          />
+        </div>
+      </section>
+
+      <section className="px-4 pt-20 pb-48">
+        <div className="container flex flex-col items-center mx-auto">
           <h2 className="text-2xl font-bold uppercase md:text-4xl">
                 Meet The Team
           </h2>
@@ -97,17 +119,21 @@ export default function Home() {
                 size="xxl"
                 className="w-full h-full shadow-lg shadow-gray-500/25"
               />
-              <Typography variant="h5" color="blue-gray" className="mt-6 mb-1">
+              <Typography variant="h5" color="blue-gray" className="mt-6 mb-1 font-chewy">
                 Mr Roboto
               </Typography>
-              <Typography className="font-normal text-blue-gray-500">
-                Founder
+              <Typography variant="lead" className="font-chewy text-blue-gray-500">
+                Founder, Community Leader, Project Director
+              </Typography>
+              <Typography variant="paragraph" className="font-chewy text-blue-gray-300">
+                Published comic artist & short fiction writer, CRW major, dog dad, Discord addict
               </Typography>
               <div className="mx-auto mt-5">
                 <div className="flex items-center gap-2">
                       <IconButton color="blue" variant="text">
                       <FontAwesomeIcon
                         icon={faTwitter}
+                        size="xl"
                       />
                       </IconButton>
                   </div>
@@ -116,22 +142,26 @@ export default function Home() {
 
             <Card color="transparent" shadow={false} className="text-center">
               <Avatar
-                src="./images/Roboto46.png"
-                alt="Roboto"
+                src="./images/Dave35.png"
+                alt="Dave"
                 size="xxl"
                 className="w-full h-full shadow-lg shadow-gray-500/25"
               />
-              <Typography variant="h5" color="blue-gray" className="mt-6 mb-1">
-                Mr Roboto
+              <Typography variant="h5" color="blue-gray" className="mt-6 mb-1 font-chewy">
+                Dave
               </Typography>
-              <Typography className="font-normal text-blue-gray-500">
-                Founder
+              <Typography variant="lead" className="font-chewy text-blue-gray-500">
+              Founder, Artist, Creative Director
+              </Typography>
+              <Typography variant="paragraph" className="font-chewy text-blue-gray-300">
+              Professional 2D animator with 5 years of studio experience--Disney XD, Amazon, & Netflix
               </Typography>
               <div className="mx-auto mt-5">
                 <div className="flex items-center gap-2">
                       <IconButton color="blue" variant="text">
                       <FontAwesomeIcon
                         icon={faTwitter}
+                        size="xl"
                       />
                       </IconButton>
                   </div>
@@ -140,22 +170,26 @@ export default function Home() {
 
             <Card color="transparent" shadow={false} className="text-center">
               <Avatar
-                src="./images/Roboto46.png"
-                alt="Roboto"
+                src="./images/wzrdslim.png"
+                alt="wzrdslim"
                 size="xxl"
                 className="w-full h-full shadow-lg shadow-gray-500/25"
               />
-              <Typography variant="h5" color="blue-gray" className="mt-6 mb-1">
-                Mr Roboto
+              <Typography variant="h5" color="blue-gray" className="mt-6 mb-1 font-chewy">
+                WzrdSlim
               </Typography>
-              <Typography className="font-normal text-blue-gray-500">
-                Founder
+              <Typography variant="lead" className="font-chewy text-blue-gray-500">
+                Developer, Wizard
+              </Typography>
+              <Typography variant="paragraph" className="font-chewy text-blue-gray-300">
+                Software Engineer- SuperRare Labs, Genesis Dragons, Pixel Protos. Creative techie who streams
               </Typography>
               <div className="mx-auto mt-5">
                 <div className="flex items-center gap-2">
                       <IconButton color="blue" variant="text">
                       <FontAwesomeIcon
                         icon={faTwitter}
+                        size="xl"
                       />
                       </IconButton>
                   </div>
@@ -164,22 +198,26 @@ export default function Home() {
 
             <Card color="transparent" shadow={false} className="text-center">
               <Avatar
-                src="./images/Roboto46.png"
-                alt="Roboto"
+                src="./images/ross.png"
+                alt="Ross"
                 size="xxl"
                 className="w-full h-full shadow-lg shadow-gray-500/25"
               />
-              <Typography variant="h5" color="blue-gray" className="mt-6 mb-1">
-                Mr Roboto
+              <Typography variant="h5" color="blue-gray" className="mt-6 mb-1 font-chewy">
+                CtrlRoss
               </Typography>
-              <Typography className="font-normal text-blue-gray-500">
-                Founder
+              <Typography variant="lead" className="font-chewy text-blue-gray-500">
+                Collab Manager
+              </Typography>
+              <Typography variant="paragraph" className="font-chewy text-blue-gray-300">
+                Experienced Artist & Collaborator- CTRL+, Pixel Protos, Genesis Dragons. Anime nerd
               </Typography>
               <div className="mx-auto mt-5">
                 <div className="flex items-center gap-2">
                       <IconButton color="blue" variant="text">
                       <FontAwesomeIcon
                         icon={faTwitter}
+                        size="xl"
                       />
                       </IconButton>
                   </div>
@@ -188,28 +226,67 @@ export default function Home() {
 
             <Card color="transparent" shadow={false} className="text-center">
               <Avatar
-                src="./images/Roboto46.png"
-                alt="Roboto"
+                src="./images/blurrpfp.png"
+                alt="Blurr"
                 size="xxl"
                 className="w-full h-full shadow-lg shadow-gray-500/25"
               />
-              <Typography variant="h5" color="blue-gray" className="mt-6 mb-1">
-                Mr Roboto
+              <Typography variant="h5" color="blue-gray" className="mt-6 mb-1 font-chewy">
+                Blurr
               </Typography>
-              <Typography className="font-normal text-blue-gray-500">
-                Founder
+              <Typography variant="lead" className="font-chewy text-blue-gray-500">
+                Marketing Manager
+              </Typography>
+              <Typography variant="paragraph" className="font-chewy text-blue-gray-300">
+                Marketing Strategy & Creative Direction within web3 / defi / nfts / P2E gaming
               </Typography>
               <div className="mx-auto mt-5">
                 <div className="flex items-center gap-2">
                       <IconButton color="blue" variant="text">
                       <FontAwesomeIcon
                         icon={faTwitter}
+                        size="xl"
                       />
                       </IconButton>
                   </div>
               </div>
             </Card>
+
+            <Card color="transparent" shadow={false} className="text-center">
+              <Avatar
+                src="./images/dub.png"
+                alt="Dub"
+                size="xxl"
+                className="w-full h-full shadow-lg shadow-gray-500/25"
+              />
+              <Typography variant="h5" color="blue-gray" className="mt-6 mb-1 font-chewy">
+                Dub
+              </Typography>
+              <Typography variant="lead" className="font-chewy text-blue-gray-500">
+                Advisor
+              </Typography>
+              <Typography variant="paragraph" className="font-chewy text-blue-gray-300">
+                Experienced Community Manager, Buisiness Developer- Slam Land, Riffnode, Soulbound. Plant Wizard
+              </Typography>
+              <div className="mx-auto mt-5">
+                <div className="flex items-center gap-2">
+                      <IconButton color="blue" variant="text">
+                      <FontAwesomeIcon
+                        icon={faTwitter}
+                        size="xl"
+                      />
+                      </IconButton>
+                  </div>
+              </div>
+            </Card>
+            
           </div>
+        </div>
+      </section>
+
+      <section className="px-4 pt-20 pb-48">
+        <div className="container flex flex-col items-center mx-auto">
+          <Button>Join Us On Discord</Button>
         </div>
       </section>
 
