@@ -1,6 +1,20 @@
 import Head from 'next/head'
 import Image from 'next/image'
 import Link from 'next/link'
+import {
+  Card, 
+  Avatar, 
+  Typography,
+  IconButton
+} from "@material-tailwind/react"
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import {
+  faGithubAlt,
+  faGoogle,
+  faFacebook,
+  faTwitter
+} from '@fortawesome/free-brands-svg-icons'
+
 
 // components
 import Frogbar from '../components/Frogbar.js'
@@ -8,6 +22,7 @@ import Frogbar from '../components/Frogbar.js'
 // images
 import Logo from '/public/images/Logo.png'
 import LogoBanner from '/public/images/logo-banner.png'
+import Roboto from '/public/images/Roboto46.png'
 
 import { config } from '../dapp.config'
 
@@ -49,6 +64,137 @@ export default function Home() {
           </div>
         </div>
       </div>
+
+      <section className="px-4 pt-20 pb-48">
+        <div className="container flex flex-col items-center mx-auto">
+          <h2 className="text-2xl font-bold uppercase md:text-4xl">
+                Meet The Team
+          </h2>
+          <div className="grid grid-cols-1 gap-12 mt-24 gap-x-24 md:grid-cols-2 xl:grid-cols-4">
+
+            <Card color="transparent" shadow={false} className="text-center">
+              <Avatar
+                src="./images/Roboto46.png"
+                alt="Roboto"
+                size="xxl"
+                className="w-full h-full shadow-lg shadow-gray-500/25"
+              />
+              <Typography variant="h5" color="blue-gray" className="mt-6 mb-1">
+                Mr Roboto
+              </Typography>
+              <Typography className="font-normal text-blue-gray-500">
+                Founder
+              </Typography>
+              <div className="mx-auto mt-5">
+                <div className="flex items-center gap-2">
+                      <IconButton color="blue" variant="text">
+                      <FontAwesomeIcon
+                        icon={faTwitter}
+                      />
+                      </IconButton>
+                  </div>
+              </div>
+            </Card>
+
+            <Card color="transparent" shadow={false} className="text-center">
+              <Avatar
+                src="./images/Roboto46.png"
+                alt="Roboto"
+                size="xxl"
+                className="w-full h-full shadow-lg shadow-gray-500/25"
+              />
+              <Typography variant="h5" color="blue-gray" className="mt-6 mb-1">
+                Mr Roboto
+              </Typography>
+              <Typography className="font-normal text-blue-gray-500">
+                Founder
+              </Typography>
+              <div className="mx-auto mt-5">
+                <div className="flex items-center gap-2">
+                      <IconButton color="blue" variant="text">
+                      <FontAwesomeIcon
+                        icon={faTwitter}
+                      />
+                      </IconButton>
+                  </div>
+              </div>
+            </Card>
+
+            <Card color="transparent" shadow={false} className="text-center">
+              <Avatar
+                src="./images/Roboto46.png"
+                alt="Roboto"
+                size="xxl"
+                className="w-full h-full shadow-lg shadow-gray-500/25"
+              />
+              <Typography variant="h5" color="blue-gray" className="mt-6 mb-1">
+                Mr Roboto
+              </Typography>
+              <Typography className="font-normal text-blue-gray-500">
+                Founder
+              </Typography>
+              <div className="mx-auto mt-5">
+                <div className="flex items-center gap-2">
+                      <IconButton color="blue" variant="text">
+                      <FontAwesomeIcon
+                        icon={faTwitter}
+                      />
+                      </IconButton>
+                  </div>
+              </div>
+            </Card>
+
+            <Card color="transparent" shadow={false} className="text-center">
+              <Avatar
+                src="./images/Roboto46.png"
+                alt="Roboto"
+                size="xxl"
+                className="w-full h-full shadow-lg shadow-gray-500/25"
+              />
+              <Typography variant="h5" color="blue-gray" className="mt-6 mb-1">
+                Mr Roboto
+              </Typography>
+              <Typography className="font-normal text-blue-gray-500">
+                Founder
+              </Typography>
+              <div className="mx-auto mt-5">
+                <div className="flex items-center gap-2">
+                      <IconButton color="blue" variant="text">
+                      <FontAwesomeIcon
+                        icon={faTwitter}
+                      />
+                      </IconButton>
+                  </div>
+              </div>
+            </Card>
+
+            <Card color="transparent" shadow={false} className="text-center">
+              <Avatar
+                src="./images/Roboto46.png"
+                alt="Roboto"
+                size="xxl"
+                className="w-full h-full shadow-lg shadow-gray-500/25"
+              />
+              <Typography variant="h5" color="blue-gray" className="mt-6 mb-1">
+                Mr Roboto
+              </Typography>
+              <Typography className="font-normal text-blue-gray-500">
+                Founder
+              </Typography>
+              <div className="mx-auto mt-5">
+                <div className="flex items-center gap-2">
+                      <IconButton color="blue" variant="text">
+                      <FontAwesomeIcon
+                        icon={faTwitter}
+                      />
+                      </IconButton>
+                  </div>
+              </div>
+            </Card>
+          </div>
+        </div>
+      </section>
+
     </div>
   )
 }
