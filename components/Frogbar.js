@@ -79,8 +79,8 @@ export default function Frogbar() {
           className="mr-4 py-1.5 cursor-pointer active:scale-90"
           src={Logo}
           alt="Logo"
-          width={200}
-          height={200}
+          width={150}
+          height={100}
         />
       </Link>
         <div className="hidden lg:block">{navList}</div>
