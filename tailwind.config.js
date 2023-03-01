@@ -1,6 +1,6 @@
-const defaultTheme = require('tailwindcss/defaultTheme')
+const withMT = require("@material-tailwind/react/utils/withMT")
 
-module.exports = {
+module.exports = withMT({
   content: [
     './pages/**/*.{js,ts,jsx,tsx}',
     './components/**/*.{js,ts,jsx,tsx}'
@@ -8,7 +8,7 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        coiny: ['Coiny', ...defaultTheme.fontFamily.sans]
+        chewy: ["Chewy", "sans-serif"]
       },
       colors: {
         'brand-purple': 'var(--clr-purple)',
@@ -25,4 +25,4 @@ module.exports = {
     }
   },
   plugins: []
-}
+})
