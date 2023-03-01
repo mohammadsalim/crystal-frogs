@@ -71,7 +71,7 @@ export default function Frogbar() {
     <Navbar 
       className="max-w-screen-xl px-4 py-2 mx-auto lg:px-8 lg:py-4"
       color="transparent"
-      fullWidth="true"
+      fullWidth={true}
     >
       <div className="container flex items-center justify-between mx-auto text-blue-gray-900">
       <Link href="/" passHref>
