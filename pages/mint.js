@@ -147,10 +147,10 @@ export default function Mint() {
                 Disconnect
               </button>
             )}
-            <h1 className="mt-3 text-3xl font-bold text-transparent uppercase font-coiny md:text-4xl bg-gradient-to-br from-brand-pink to-brand-purple bg-clip-text">
+            <h1 className="mt-3 text-3xl font-bold text-transparent uppercase font-chewy md:text-4xl bg-gradient-to-br from-brand-pink to-brand-purple bg-clip-text">
               Crystal Frogs
             </h1>
-            <h2 className="mt-3 text-2xl font-bold text-transparent uppercase font-coiny md:text-2xl bg-gradient-to-br from-brand-green to-brand-blue bg-clip-text">
+            <h2 className="mt-3 text-2xl font-bold text-transparent uppercase font-chewy md:text-2xl bg-gradient-to-br from-brand-green to-brand-blue bg-clip-text">
               {paused ? 'Mint Paused' : isPreSale ? 'Pre-Mint' : 'Public Mint'}
             </h2>
             <h3 className="text-sm tracking-widest text-pink-200">
@@ -163,7 +163,7 @@ export default function Mint() {
 
             <div className="flex flex-col w-full mt-10 md:flex-row md:space-x-14 md:mt-14">
               <div className="relative w-full">
-                <div className="absolute z-10 flex items-center justify-center px-4 py-2 text-base font-semibold text-white bg-black border rounded-md font-coiny top-2 left-2 opacity-80 filter backdrop-blur-lg border-brand-purple">
+                <div className="absolute z-10 flex items-center justify-center px-4 py-2 text-base font-semibold text-white bg-black border rounded-md font-chewy top-2 left-2 opacity-80 filter backdrop-blur-lg border-brand-purple">
                   <p>
                     <span className="text-brand-pink">{totalMinted}</span> /{' '}
                     {maxSupply}
@@ -178,7 +178,7 @@ export default function Mint() {
               </div>
 
               <div className="flex flex-col items-center w-full px-4 mt-16 md:mt-0">
-                <div className="flex items-center justify-between w-full font-coiny">
+                <div className="flex items-center justify-between w-full font-chewy">
                   <button
                     className="flex items-center justify-center h-10 font-bold bg-gray-300 rounded-md w-14 md:w-16 md:h-12 text-brand-background hover:shadow-lg"
                     onClick={incrementMintAmount}
@@ -229,7 +229,7 @@ export default function Mint() {
                 </p>
 
                 <div className="w-full py-4 mt-16 border-t border-b">
-                  <div className="flex items-center justify-between w-full text-xl font-coiny text-brand-yellow">
+                  <div className="flex items-center justify-between w-full text-xl font-chewy text-brand-yellow">
                     <p>Total</p>
 
                     <div className="flex items-center space-x-3">
@@ -251,7 +251,7 @@ export default function Mint() {
                       paused || isMinting
                         ? 'bg-gray-900 cursor-not-allowed'
                         : 'bg-gradient-to-br from-brand-purple to-brand-pink shadow-lg hover:shadow-pink-400/50'
-                    } font-coiny mt-12 w-full px-6 py-3 rounded-md text-2xl text-white  mx-4 tracking-wide uppercase`}
+                    } font-chewy mt-12 w-full px-6 py-3 rounded-md text-2xl text-white  mx-4 tracking-wide uppercase`}
                     disabled={paused || isMinting}
                     onClick={isPreSale ? presaleMintHandler : publicMintHandler}
                   >
@@ -259,7 +259,7 @@ export default function Mint() {
                   </button>
                 ) : (
                   <button
-                    className="w-full px-6 py-3 mx-4 mt-12 text-2xl tracking-wide text-white uppercase rounded-md shadow-lg font-coiny bg-gradient-to-br from-brand-purple to-brand-pink hover:shadow-pink-400/50"
+                    className="w-full px-6 py-3 mx-4 mt-12 text-2xl tracking-wide text-white uppercase rounded-md shadow-lg font-chewy bg-gradient-to-br from-brand-purple to-brand-pink hover:shadow-pink-400/50"
                     onClick={() => connect()}
                   >
                     Connect Wallet
@@ -283,7 +283,7 @@ export default function Mint() {
 
             {/* Contract Address */}
             <div className="flex flex-col items-center w-full py-2 mt-10 border-t border-gray-800">
-              <h3 className="mt-6 text-2xl uppercase font-coiny text-brand-pink">
+              <h3 className="mt-6 text-2xl uppercase font-chewy text-brand-pink">
                 Contract Address
               </h3>
               <a

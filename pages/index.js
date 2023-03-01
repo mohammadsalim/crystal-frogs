@@ -94,7 +94,7 @@ export default function Home() {
       <div className="container flex flex-col items-center w-full h-full max-w-5xl pt-4 mx-auto">
         <div className="flex flex-col items-center w-full max-w-4xl">
           <Link href="/mint" passHref>
-            <a className="inline-flex items-center px-6 mt-16 text-sm font-medium text-center uppercase rounded font-coiny oy-2 sm:text-2xl md:text-3xl text-rose-500 hover:bg-rose-600 hover:text-white">
+            <h1 className="inline-flex items-center px-6 mt-16 text-sm font-medium text-center uppercase rounded font-chewy oy-2 sm:text-2xl md:text-3xl text-rose-500 hover:bg-rose-600 hover:text-white">
               Go to minting page
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -110,7 +110,7 @@ export default function Home() {
                   d="M17 8l4 4m0 0l-4 4m4-4H3"
                 />
               </svg>
-            </a>
+            </h1>
           </Link>
 
           <div className="flex flex-col items-center w-full mt-20 space-y-10 md:flex-row md:space-x-16">
@@ -120,7 +120,7 @@ export default function Home() {
               className="object-cover w-64 h-64 rounded-md"
             />
 
-            <div className="flex flex-col items-center justify-center px-4 py-10 text-center text-gray-800 md:items-start font-coiny md:px-0 mt-14">
+            <div className="flex flex-col items-center justify-center px-4 py-10 text-center text-gray-800 md:items-start font-chewy md:px-0 mt-14">
               <h2 className="text-2xl font-bold uppercase md:text-4xl">
                 About Crystal Frogs
               </h2>
