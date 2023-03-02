@@ -321,6 +321,10 @@ export default function Home() {
 
       <section className="px-4 pt-20 pb-48">
         <div className="container flex flex-col items-center mx-auto">
+        <Image
+          src={DiscordBanner}
+          alt="Discord"
+          />
           <Button>Join Us On Discord</Button>
         </div>
       </section>

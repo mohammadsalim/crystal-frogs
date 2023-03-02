@@ -6,6 +6,11 @@ import {
   Button,
   IconButton,
 } from "@material-tailwind/react";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import {
+  faTwitter,
+  faDiscord
+} from '@fortawesome/free-brands-svg-icons'
 import Link from "next/link";
 import Image from 'next/image'
 
@@ -28,17 +33,7 @@ export default function Frogbar() {
         as="li"
         variant="h3"
         color="blue-gray"
-        className="p-1 font-chewy"
-      >
-        <a href="#" className="flex items-center">
-          About
-        </a>
-      </Typography>
-      <Typography
-        as="li"
-        variant="h3"
-        color="blue-gray"
-        className="p-1 font-chewy"
+        className="p-1 uppercase font-chewy"
       >
         <a href="#" className="flex items-center">
           Trailer
@@ -48,17 +43,37 @@ export default function Frogbar() {
         as="li"
         variant="h3"
         color="blue-gray"
-        className="p-1 font-chewy"
+        className="p-1 uppercase font-chewy"
       >
         <a href="#" className="flex items-center">
-          Frogmap
+          About
         </a>
       </Typography>
       <Typography
         as="li"
         variant="h3"
         color="blue-gray"
-        className="p-1 font-chewy"
+        className="p-1 uppercase font-chewy"
+      >
+        <a href="#" className="flex items-center">
+          $Crystal
+        </a>
+      </Typography>
+      <Typography
+        as="li"
+        variant="h3"
+        color="blue-gray"
+        className="p-1 uppercase font-chewy"
+      >
+        <a href="#" className="flex items-center">
+          Roadmap
+        </a>
+      </Typography>
+      <Typography
+        as="li"
+        variant="h3"
+        color="blue-gray"
+        className="p-1 uppercase font-chewy"
       >
         <a href="#" className="flex items-center">
           Team
@@ -83,9 +98,25 @@ export default function Frogbar() {
           height={200}
         />
       </Link>
+        <IconButton 
+          color="blue" 
+          variant="text">
+          <FontAwesomeIcon
+              icon={faTwitter}
+              size="xl"
+          />
+        </IconButton>
+        <IconButton 
+          color="purple" 
+          variant="text">
+          <FontAwesomeIcon
+              icon={faDiscord}
+              size="xl"
+          />
+        </IconButton>
         <div className="hidden lg:block">{navList}</div>
         <Button variant="gradient" size="lg" className="hidden lg:inline-block font-chewy">
-          <span>Mint Coming Soon</span>
+          <span>Mint</span>
         </Button>
         <IconButton
           variant="text"
@@ -129,7 +160,7 @@ export default function Frogbar() {
         <div className="container mx-auto">
           {navList}
           <Button variant="gradient" size="lg" fullWidth className="mb-2 font-chewy">
-            <span>Mint Coming Soon</span>
+            <span>Mint</span>
           </Button>
         </div>
       </MobileNav>
