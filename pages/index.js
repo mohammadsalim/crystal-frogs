@@ -67,7 +67,7 @@ export default function Home() {
           <div className="flex flex-col items-center w-full space-y-10 md:flex-row md:space-x-16">
             <div className="flex flex-col items-center justify-center px-4 py-10 text-center text-gray-800 md:items-start font-chewy md:px-0 mt-14">
               <Typography className="mt-6 text-2xl font-bold uppercase md:text-4xl font-chewy">
-                ✨ Crystal Frogs is a <span className="text-green-500">community-driven animated nft series</span> on the <span className="text-green-500">Ethereum</span> Blockchain. The Collection consists of <span className="text-green-500">5000 programmatically, randomly generated NFTs</span> from 100's of illustrated traits 🌱 Ribbit! 🐸
+                ✨ Crystal Frogs is a <span className="text-green-500">community-driven animated nft series</span> on the <span className="text-green-500">Ethereum</span> Blockchain. The Collection consists of <span className="text-green-500">5000 programmatically, randomly generated NFTs</span> from 100s of illustrated traits 🌱 Ribbit! 🐸
               </Typography>
             </div>
           </div>
