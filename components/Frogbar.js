@@ -10,7 +10,7 @@ import Link from "next/link";
 import Image from 'next/image'
 
 // images
-import Logo from '/public/images/Logo.gif'
+import Logo from '/public/images/Logo.png'
  
 export default function Frogbar() {
   const [openNav, setOpenNav] = useState(false);
@@ -79,13 +79,13 @@ export default function Frogbar() {
           className="mr-4 py-1.5 cursor-pointer active:scale-90"
           src={Logo}
           alt="Logo"
-          width={150}
-          height={100}
+          width={200}
+          height={200}
         />
       </Link>
         <div className="hidden lg:block">{navList}</div>
         <Button variant="gradient" size="lg" className="hidden lg:inline-block font-chewy">
-          <span>Mint Soon</span>
+          <span>Mint Coming Soon</span>
         </Button>
         <IconButton
           variant="text"
@@ -129,7 +129,7 @@ export default function Frogbar() {
         <div className="container mx-auto">
           {navList}
           <Button variant="gradient" size="lg" fullWidth className="mb-2 font-chewy">
-            <span>Mint Soon</span>
+            <span>Mint Coming Soon</span>
           </Button>
         </div>
       </MobileNav>

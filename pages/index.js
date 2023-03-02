@@ -2,7 +2,8 @@ import Head from 'next/head'
 import Image from 'next/image'
 import Link from 'next/link'
 import {
-  Card, 
+  Card,
+  CardBody, 
   Avatar, 
   Typography,
   IconButton,
@@ -21,18 +22,25 @@ import {
 import Frogbar from '../components/Frogbar.js'
 
 // images
-import Logo from '/public/images/Logo.png'
+import Logo from '/public/images/Logo.gif'
+import SampleFrogs from '/public/images/sample-frogs.gif'
+import Crystal from '/public/images/incubator.gif'
 import LogoBanner from '/public/images/logo-banner.png'
+import CarChase from '/public/images/carchase.gif'
 import MintInfo from '/public/images/mint-info.gif'
 import Roadmap from '/public/images/roadmap.jpg'
 import DiscordBanner from '/public/images/discord-banner.png'
-import Roboto from '/public/images/Roboto46.png'
+import CrystalFloat from '/public/images/Crystals-Float.gif'
+import Glossary from '/public/images/glossary.png'
+import Staking from '/public/images/staking.png'
+import TokenUtility from '/public/images/token-utility.png'
+import Throw from '/public/images/Throw.gif'
 
 import { config } from '../dapp.config'
 
 export default function Home() {
   return (
-    <div className="flex flex-col w-full h-full min-h-screen overflow-hidden">
+    <div className="flex flex-col w-full h-full min-h-screen overflow-hidden bg-[url('../public/images/Crystals-Float.gif')] bg-fixed bg-no-repeat bg-cover bg-center">
       <Head>
         <title>{config.title}</title>
         <meta name="description" content={config.description} />
@@ -54,38 +62,35 @@ export default function Home() {
       <div className="container flex flex-col items-center w-full h-full max-w-5xl pt-4 mx-auto">
         <div className="flex flex-col items-center w-full max-w-4xl">
           <Image
-          src={LogoBanner}
+          src={Logo}
           alt="Banner"
           />
-
-          <div className="flex flex-col items-center w-full mt-20 space-y-10 md:flex-row md:space-x-16">
-            {/* CrystalFrogs Image */}
-            <img
-              src="/images/sample-frogs.gif"
-              className="object-cover w-64 h-64 rounded-md"
-            />
-
+          <div className="flex flex-col items-center w-full space-y-10 md:flex-row md:space-x-16">
             <div className="flex flex-col items-center justify-center px-4 py-10 text-center text-gray-800 md:items-start font-chewy md:px-0 mt-14">
-              <h2 className="text-2xl font-bold uppercase md:text-4xl">
-                About Crystal Frogs
-              </h2>
-
-              <p className="mt-6 text-lg">
-                {`✨5000 Crystal Frogs NFTs coming soon. Community Driven Animated Cartoon 🌱Ribbit! 🐸`}
-              </p>
+              <Typography className="mt-6 text-2xl font-bold uppercase md:text-4xl font-chewy">
+                ✨ Crystal Frogs is a <span className="text-green-500">community-driven animated nft series</span> on the <span className="text-green-500">Ethereum</span> Blockchain. The Collection consists of <span className="text-green-500">5000 programmatically, randomly generated NFTs</span> from 100's of illustrated traits 🌱 Ribbit! 🐸
+              </Typography>
             </div>
           </div>
         </div>
-      </div>
-
-      <section className="px-4 pt-20 pb-48">
-        <div className="container flex flex-col items-center mx-auto">
-        <Image
-          src={LogoBanner}
-          alt="Banner"
+        <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
+          <Image
+            src={SampleFrogs}
+            className="object-cover w-64 h-64 rounded-2xl"
+          />
+          <Card className="bg-green-500 shadow-lg rounded-2xl shadow-gray-500/10">
+            <CardBody className="px-8 text-center">
+              <Typography variant="lead" className="text-gray-200 font-chewy">
+                Crystal Frog holders have the opportunity to have their <span className="text-yellow-200">NFT featured in the series</span>, decide the narrative direction of the series through <span className="text-yellow-200">on-chain voting in a choose-your-own-adventure</span> poll at the end of each animated short, and have <span className="text-yellow-200">exclusive access to the production</span> of the series
+              </Typography>
+            </CardBody>
+          </Card>
+          <Image
+            src={CarChase}
+            className="object-cover w-64 h-64 rounded-2xl"
           />
         </div>
-      </section>
+      </div>
 
       <section className="px-4 pt-20 pb-48">
         <div className="container flex flex-col items-center mx-auto">
@@ -96,6 +101,30 @@ export default function Home() {
         </div>
       </section>
 
+      {/*$Crystal*/}
+      <section className="px-4 pt-20 pb-48">
+        <div className="container flex flex-col items-center mx-auto">
+        <Image
+          src={Staking}
+          alt="Staking $Crystal"
+          />
+        </div>
+        <div className="container flex flex-col items-center mx-auto">
+        <Image
+          src={TokenUtility}
+          alt="Token Utility"
+          />
+        </div>
+      </section>
+
+        <div className="container flex flex-col items-center mx-auto">
+        <Image
+          src={Throw}
+          alt="Throw Crystal"
+          />
+        </div>
+      
+      {/*Roadmap*/}
       <section className="px-4 pt-20 pb-48">
         <div className="container flex flex-col items-center mx-auto">
         <Image
@@ -105,6 +134,7 @@ export default function Home() {
         </div>
       </section>
 
+      {/*Team*/}
       <section className="px-4 pt-20 pb-48">
         <div className="container flex flex-col items-center mx-auto">
           <h2 className="text-2xl font-bold uppercase md:text-4xl">
