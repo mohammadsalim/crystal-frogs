@@ -30,7 +30,6 @@ import CarChase from '/public/images/carchase.gif'
 import MintInfo from '/public/images/mint-info.gif'
 import Roadmap from '/public/images/roadmap.jpg'
 import DiscordBanner from '/public/images/discord-banner.png'
-import CrystalFloat from '/public/images/Crystals-Float.gif'
 import Glossary from '/public/images/glossary.png'
 import Staking from '/public/images/staking.png'
 import TokenUtility from '/public/images/token-utility.png'
@@ -107,6 +106,12 @@ export default function Home() {
         <Image
           src={Staking}
           alt="Staking $Crystal"
+          />
+        </div>
+        <div className="container flex flex-col items-center mx-auto">
+        <Image
+          src={Glossary}
+          alt="Glossary"
           />
         </div>
         <div className="container flex flex-col items-center mx-auto">
