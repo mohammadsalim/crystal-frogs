@@ -24,7 +24,6 @@ import Frogbar from '../components/Frogbar.js'
 // images
 import Logo from '/public/images/Logo.gif'
 import SampleFrogs from '/public/images/sample-frogs.gif'
-import Crystal from '/public/images/incubator.gif'
 import LogoBanner from '/public/images/logo-banner.png'
 import CarChase from '/public/images/carchase.gif'
 import MintInfo from '/public/images/mint-info.gif'
