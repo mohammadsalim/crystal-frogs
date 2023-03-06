@@ -234,9 +234,11 @@ export default function Mint() {
 
                     <div className="flex items-center space-x-3">
                       <p>
-                        {Number.parseFloat(isPreSale ? config.preSalePrice * mintAmount : config.price * mintAmount).toFixed(
-                          2
-                        )}{' '}
+                        {Number.parseFloat(
+                          isPreSale
+                            ? config.preSalePrice * mintAmount
+                            : config.price * mintAmount
+                        ).toFixed(2)}{' '}
                         ETH
                       </p>{' '}
                       <span className="text-gray-400">+ GAS</span>

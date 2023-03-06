@@ -1,39 +1,36 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect } from 'react'
 import {
   Navbar,
   MobileNav,
   Typography,
   Button,
-  IconButton,
-} from "@material-tailwind/react";
-import { useScrollPosition } from "../hooks/useScrollPosition";
+  IconButton
+} from '@material-tailwind/react'
+import { useScrollPosition } from '../hooks/useScrollPosition'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import {
-  faTwitter,
-  faDiscord
-} from '@fortawesome/free-brands-svg-icons'
-import Link from "next/link";
+import { faTwitter, faDiscord } from '@fortawesome/free-brands-svg-icons'
+import Link from 'next/link'
 import Image from 'next/image'
 
 // images
 import Logo from '/public/images/Logo.png'
- 
+
 export default function Frogbar() {
   function classNames(...classes) {
     return classes.filter(Boolean).join(' ')
   }
 
-  const scrollPosition = useScrollPosition();
+  const scrollPosition = useScrollPosition()
 
-  const [openNav, setOpenNav] = useState(false);
- 
+  const [openNav, setOpenNav] = useState(false)
+
   useEffect(() => {
     window.addEventListener(
-      "resize",
+      'resize',
       () => window.innerWidth >= 960 && setOpenNav(false)
-    );
-  }, []);
- 
+    )
+  }, [])
+
   const navList = (
     <ul className="flex flex-col gap-2 mt-2 mb-4 lg:mb-0 lg:mt-0 lg:flex-row lg:items-center lg:gap-6">
       <Typography
@@ -42,9 +39,9 @@ export default function Frogbar() {
         color="blue-gray"
         className="p-1 uppercase font-chewy"
       >
-        <a href="#" className="flex items-center">
+        <Link href="#trailer-section" className="flex items-center" passHref>
           Trailer
-        </a>
+        </Link>
       </Typography>
       <Typography
         as="li"
@@ -52,9 +49,9 @@ export default function Frogbar() {
         color="blue-gray"
         className="p-1 uppercase font-chewy"
       >
-        <a href="#" className="flex items-center">
+        <Link href="#about-section" className="flex items-center" passHref>
           About
-        </a>
+        </Link>
       </Typography>
       <Typography
         as="li"
@@ -62,9 +59,9 @@ export default function Frogbar() {
         color="blue-gray"
         className="p-1 uppercase font-chewy"
       >
-        <a href="#" className="flex items-center">
+        <Link href="#crystal-section" className="flex items-center" passHref>
           $Crystal
-        </a>
+        </Link>
       </Typography>
       <Typography
         as="li"
@@ -72,9 +69,9 @@ export default function Frogbar() {
         color="blue-gray"
         className="p-1 uppercase font-chewy"
       >
-        <a href="#" className="flex items-center">
+        <Link href="#roadmap-section" className="flex items-center" passHref>
           Roadmap
-        </a>
+        </Link>
       </Typography>
       <Typography
         as="li"
@@ -82,47 +79,44 @@ export default function Frogbar() {
         color="blue-gray"
         className="p-1 uppercase font-chewy"
       >
-        <a href="#" className="flex items-center">
+        <Link href="#team-section" className="flex items-center" passHref>
           Team
-        </a>
+        </Link>
       </Typography>
     </ul>
-  );
- 
+  )
+
   return (
-    <Navbar 
-      className={classNames(scrollPosition > 0 ? "shadow bg-white" : "shadow-none", "transition-shadow sticky top-0 z-50 px-4 py-2 mx-auto lg:px-8 lg:py-4")}
+    <Navbar
+      className={classNames(
+        scrollPosition > 0 ? 'shadow bg-white' : 'shadow-none',
+        'transition-shadow sticky top-0 z-50 px-4 py-2 mx-auto lg:px-8 lg:py-4'
+      )}
       color="transparent"
       fullWidth={true}
     >
       <div className="container flex items-center justify-between w-full mx-auto text-blue-gray-900">
-      <Link href="/" passHref>
-        <Image
-          className="mr-4 py-1.5 cursor-pointer active:scale-90"
-          src={Logo}
-          alt="Logo"
-          width={200}
-          height={200}
-        />
-      </Link>
-        <IconButton 
-          color="blue" 
-          variant="text">
-          <FontAwesomeIcon
-              icon={faTwitter}
-              size="xl"
+        <Link href="/" passHref>
+          <Image
+            className="mr-4 py-1.5 cursor-pointer active:scale-90"
+            src={Logo}
+            alt="Logo"
+            width={200}
+            height={200}
           />
+        </Link>
+        <IconButton color="blue" variant="text">
+          <FontAwesomeIcon icon={faTwitter} size="xl" />
         </IconButton>
-        <IconButton 
-          color="purple" 
-          variant="text">
-          <FontAwesomeIcon
-              icon={faDiscord}
-              size="xl"
-          />
+        <IconButton color="purple" variant="text">
+          <FontAwesomeIcon icon={faDiscord} size="xl" />
         </IconButton>
         <div className="hidden lg:block">{navList}</div>
-        <Button variant="gradient" size="lg" className="hidden lg:inline-block font-chewy">
+        <Button
+          variant="gradient"
+          size="lg"
+          className="hidden lg:inline-block font-chewy"
+        >
           <span>Mint</span>
         </Button>
         <IconButton
@@ -166,11 +160,16 @@ export default function Frogbar() {
       <MobileNav open={openNav}>
         <div className="container mx-auto">
           {navList}
-          <Button variant="gradient" size="lg" fullWidth className="mb-2 font-chewy">
+          <Button
+            variant="gradient"
+            size="lg"
+            fullWidth
+            className="mb-2 font-chewy"
+          >
             <span>Mint</span>
           </Button>
         </div>
       </MobileNav>
     </Navbar>
-  );
+  )
 }

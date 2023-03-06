@@ -1,4 +1,4 @@
-const withMT = require("@material-tailwind/react/utils/withMT")
+const withMT = require('@material-tailwind/react/utils/withMT')
 
 module.exports = withMT({
   content: [
@@ -8,7 +8,7 @@ module.exports = withMT({
   theme: {
     extend: {
       fontFamily: {
-        chewy: ["Chewy", "sans-serif"]
+        chewy: ['Chewy', 'sans-serif']
       },
       colors: {
         'brand-purple': 'var(--clr-purple)',
