@@ -39,8 +39,8 @@ export default function Frogbar() {
         color="blue-gray"
         className="p-1 uppercase font-chewy"
       >
-        <Link href="#trailer-section" className="flex items-center" passHref>
-          Trailer
+        <Link href="#about-section" className="flex items-center" passHref>
+          About
         </Link>
       </Typography>
       <Typography
@@ -49,8 +49,8 @@ export default function Frogbar() {
         color="blue-gray"
         className="p-1 uppercase font-chewy"
       >
-        <Link href="#about-section" className="flex items-center" passHref>
-          About
+        <Link href="#trailer-section" className="flex items-center" passHref>
+          Trailer
         </Link>
       </Typography>
       <Typography
@@ -101,8 +101,8 @@ export default function Frogbar() {
             className="mr-4 py-1.5 cursor-pointer active:scale-90"
             src={Logo}
             alt="Logo"
-            width={200}
-            height={200}
+            width={100}
+            height={100}
           />
         </Link>
         <IconButton color="blue" variant="text">

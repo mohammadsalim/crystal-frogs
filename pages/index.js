@@ -37,7 +37,11 @@ import { config } from '../dapp.config'
 
 export default function Home() {
   return (
-    <div className="flex flex-col w-full h-full min-h-screen bg-[url('../public/images/Crystals-Float.gif')] bg-fixed bg-no-repeat bg-cover bg-center">
+    <div className="flex flex-col items-center justify-center w-full h-full min-h-screen">
+      <img
+        src="/images/Crystals-Float.gif"
+        className="absolute inset-auto block object-cover w-full min-h-screen bg-center bg-no-repeat bg-cover object-fixed animate-pulse-slow"
+      />
       <Head>
         <title>{config.title}</title>
         <meta name="description" content={config.description} />
@@ -46,29 +50,6 @@ export default function Home() {
       </Head>
 
       <Frogbar />
-
-      {/* <section className="px-4 pt-20 pb-48">
-        <div className="container flex flex-col items-center mx-auto">
-          <video className="w-full h-auto max-w-full border border-gray-200 rounded-lg dark:border-gray-700" autoPlay muted controls>
-            <source src="./images/trailer.mp4" type="video/mp4"/>
-          </video>
-        </div>
-      </section> */}
-
-      <section className="px-4 pt-20 pb-48" id="trailer-section">
-        <div className="container flex flex-col items-center mx-auto">
-          <iframe
-            className="w-full max-h-full border border-gray-200 rounded-lg dark:border-gray-700"
-            width="1280"
-            height="720"
-            src="https://www.youtube.com/embed/xL4HzwmVkVg?mute=1&autoplay=1"
-            title="YouTube video player"
-            frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            allowFullScreen
-          ></iframe>
-        </div>
-      </section>
 
       <section
         className="container flex flex-col items-center w-full h-full max-w-5xl pt-4 mx-auto"
@@ -128,6 +109,23 @@ export default function Home() {
         <div className="container flex flex-col items-center mx-auto">
           <Image src={MintInfo} alt="Mint" />
         </div>
+      </section>
+
+      {/*Trailer*/}
+      <section
+        className="container flex flex-col items-center w-full h-full max-w-5xl pt-4 mx-auto"
+        id="trailer-section"
+      >
+        <iframe
+          className="w-full max-h-full border border-gray-200 rounded-lg dark:border-gray-700"
+          width="1280"
+          height="720"
+          src="https://www.youtube.com/embed/xL4HzwmVkVg?mute=1&autoplay=1"
+          title="YouTube video player"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowFullScreen
+        ></iframe>
       </section>
 
       {/*$Crystal*/}
