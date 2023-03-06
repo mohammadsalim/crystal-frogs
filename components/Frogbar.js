@@ -6,6 +6,7 @@ import {
   Button,
   IconButton,
 } from "@material-tailwind/react";
+import { useScrollPosition } from "../hooks/useScrollPosition";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {
   faTwitter,
@@ -18,6 +19,12 @@ import Image from 'next/image'
 import Logo from '/public/images/Logo.png'
  
 export default function Frogbar() {
+  function classNames(...classes) {
+    return classes.filter(Boolean).join(' ')
+  }
+
+  const scrollPosition = useScrollPosition();
+
   const [openNav, setOpenNav] = useState(false);
  
   useEffect(() => {
@@ -84,11 +91,11 @@ export default function Frogbar() {
  
   return (
     <Navbar 
-      className="max-w-screen-xl px-4 py-2 mx-auto lg:px-8 lg:py-4"
+      className={classNames(scrollPosition > 0 ? "shadow bg-white" : "shadow-none", "transition-shadow sticky top-0 z-50 px-4 py-2 mx-auto lg:px-8 lg:py-4")}
       color="transparent"
       fullWidth={true}
     >
-      <div className="container flex items-center justify-between mx-auto text-blue-gray-900">
+      <div className="container flex items-center justify-between w-full mx-auto text-blue-gray-900">
       <Link href="/" passHref>
         <Image
           className="mr-4 py-1.5 cursor-pointer active:scale-90"

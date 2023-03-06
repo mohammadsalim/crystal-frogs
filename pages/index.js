@@ -38,7 +38,7 @@ import { config } from '../dapp.config'
 
 export default function Home() {
   return (
-    <div className="flex flex-col w-full h-full min-h-screen overflow-hidden bg-[url('../public/images/Crystals-Float.gif')] bg-fixed bg-no-repeat bg-cover bg-center">
+    <div className="flex flex-col w-full h-full min-h-screen bg-[url('../public/images/Crystals-Float.gif')] bg-fixed bg-no-repeat bg-cover bg-center">
       <Head>
         <title>{config.title}</title>
         <meta name="description" content={config.description} />
