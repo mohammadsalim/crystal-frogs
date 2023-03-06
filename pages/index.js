@@ -27,6 +27,7 @@ import Staking from '/public/images/staking.png'
 import TokenUtility from '/public/images/token-utility.png'
 import Throw from '/public/images/Throw.gif'
 import TraitsSk8r from '/public/images/traitsskateboard.gif'
+import TruckBois from '/public/images/TruckBois.gif'
 
 import { config } from '../dapp.config'
 
@@ -119,6 +120,10 @@ export default function Home() {
         ></iframe>
       </section>
 
+      <div className="container flex flex-col items-center mx-auto">
+        <Image src={TraitsSk8r} className="rounded-2xl" alt="Truck Bois" />
+      </div>
+
       {/*$Crystal*/}
       <section className="px-4 pt-20 pb-48" id="crystal-section">
         <div className="container flex flex-col items-center mx-auto">
@@ -147,11 +152,7 @@ export default function Home() {
       </section>
 
       <div className="container flex flex-col items-center mx-auto">
-        <Image
-          src={TraitsSk8r}
-          className="rounded-2xl"
-          alt="Staking $Crystal"
-        />
+        <Image src={TruckBois} className="rounded-2xl" alt="Truck Bois" />
       </div>
 
       {/*Team*/}
