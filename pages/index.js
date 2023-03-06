@@ -48,11 +48,17 @@ export default function Home() {
 
       <Frogbar />
 
-      <section className="px-4 pt-20 pb-48">
+      {/* <section className="px-4 pt-20 pb-48">
         <div className="container flex flex-col items-center mx-auto">
           <video className="w-full h-auto max-w-full border border-gray-200 rounded-lg dark:border-gray-700" autoPlay muted controls>
-            <source src="https://drive.google.com/file/d/1em-LTO0g8iQRaxjsxH5SVjkvK9KrbwMO/view?usp=share_link" type="video/mp4"/>
+            <source src="./images/trailer.mp4" type="video/mp4"/>
           </video>
+        </div>
+      </section> */}
+
+      <section className="px-4 pt-20 pb-48">
+        <div className="container flex flex-col items-center mx-auto">
+        <iframe className="w-full max-h-full border border-gray-200 rounded-lg dark:border-gray-700" width="1280" height="720" src="https://www.youtube.com/embed/xL4HzwmVkVg?mute=1&autoplay=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
         </div>
       </section>
 
