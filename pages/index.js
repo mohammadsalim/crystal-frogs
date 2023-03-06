@@ -393,16 +393,17 @@ export default function Home() {
       </section>
       <div className="container relative mx-auto">
         <Image src={DiscordBanner} className="rounded-2xl" alt="Discord" />
-        <button className="absolute inset-0 flex items-center justify-center w-full h-full">
+        <div className="absolute inset-0 flex items-center justify-center w-full h-full">
           <a
-            className="px-6 py-3 font-medium text-white rounded-full bg-brand-purple"
             target="_blank"
             href="https://discord.gg/crystalfrogs"
             rel="noopener noreferrer"
           >
-            Join Us On Discord
+            <Button size="lg" color="deep-purple" className="font-chewy">
+              Join Us On Discord
+            </Button>
           </a>
-        </button>
+        </div>
       </div>
     </div>
   )
