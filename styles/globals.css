@@ -5,7 +5,7 @@
 
 :root {
   --font-family: 'Chewy', sans-serif;
-  --clr-light: ##fdfef9;
+  --clr-light: #ebfbff;
   --clr-purple: #454393;
   --clr-pink: #f15bb5;
   --clr-yellow: #fee440;
@@ -14,7 +14,7 @@
   --clr-orange: #ffac80;
   --clr-selection-bg: #a6ff00;
   --clr-selection-text: #121212;
-  --clr-background: #ebfbff;
+  --clr-background: #dbf8ff;
 
   /* Customize Wallet Modal */
   /* CUSTOMIZE THE COLOR  PALLETTE */
@@ -61,7 +61,7 @@
 html {
   scroll-behavior: smooth;
   font-family: var(--font-family);
-  background: var(--clr-light);
+  background: var(--clr-background);
 }
 
 body {

@@ -90,7 +90,7 @@ export default function Frogbar() {
   return (
     <Navbar
       className={classNames(
-        scrollPosition > 0 ? 'shadow bg-white' : 'shadow-none',
+        scrollPosition > 0 ? 'shadow bg-brand-background' : 'shadow-none',
         'transition-shadow sticky top-0 z-50 px-4 py-2 mx-auto lg:px-8 lg:py-4'
       )}
       color="transparent"
