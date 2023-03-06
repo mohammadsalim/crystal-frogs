@@ -193,7 +193,7 @@ export default function Home() {
                   rel="noopener noreferrer"
                 >
                   <IconButton color="blue" variant="text">
-                    <FontAwesomeIcon icon={faTwitter} size="xl" />
+                    <FontAwesomeIcon icon={faTwitter} size="2xl" />
                   </IconButton>
                 </a>
               </div>
@@ -231,7 +231,7 @@ export default function Home() {
                   rel="noopener noreferrer"
                 >
                   <IconButton color="blue" variant="text">
-                    <FontAwesomeIcon icon={faTwitter} size="xl" />
+                    <FontAwesomeIcon icon={faTwitter} size="2xl" />
                   </IconButton>
                 </a>
               </div>
@@ -269,7 +269,7 @@ export default function Home() {
                   rel="noopener noreferrer"
                 >
                   <IconButton color="blue" variant="text">
-                    <FontAwesomeIcon icon={faTwitter} size="xl" />
+                    <FontAwesomeIcon icon={faTwitter} size="2xl" />
                   </IconButton>
                 </a>
               </div>
@@ -307,7 +307,7 @@ export default function Home() {
                   rel="noopener noreferrer"
                 >
                   <IconButton color="blue" variant="text">
-                    <FontAwesomeIcon icon={faTwitter} size="xl" />
+                    <FontAwesomeIcon icon={faTwitter} size="2xl" />
                   </IconButton>
                 </a>
               </div>
@@ -345,7 +345,7 @@ export default function Home() {
                   rel="noopener noreferrer"
                 >
                   <IconButton color="blue" variant="text">
-                    <FontAwesomeIcon icon={faTwitter} size="xl" />
+                    <FontAwesomeIcon icon={faTwitter} size="2xl" />
                   </IconButton>
                 </a>
               </div>
@@ -382,7 +382,7 @@ export default function Home() {
                   rel="noopener noreferrer"
                 >
                   <IconButton color="blue" variant="text">
-                    <FontAwesomeIcon icon={faTwitter} size="xl" />
+                    <FontAwesomeIcon icon={faTwitter} size="2xl" />
                   </IconButton>
                 </a>
               </div>

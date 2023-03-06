@@ -112,7 +112,7 @@ export default function Frogbar() {
           rel="noopener noreferrer"
         >
           <IconButton color="blue" variant="text" size="lg">
-            <FontAwesomeIcon icon={faTwitter} size="xl" />
+            <FontAwesomeIcon icon={faTwitter} size="2xl" />
           </IconButton>
         </a>
         <a
@@ -121,7 +121,7 @@ export default function Frogbar() {
           rel="noopener noreferrer"
         >
           <IconButton color="deep-purple" variant="text" size="lg">
-            <FontAwesomeIcon icon={faDiscord} size="sm" />
+            <FontAwesomeIcon icon={faDiscord} size="2xl" />
           </IconButton>
         </a>
         <div className="hidden lg:block">{navList}</div>
@@ -132,7 +132,7 @@ export default function Frogbar() {
           color="gray"
         >
           <span>
-            Mint <FontAwesomeIcon icon={faLock} size="lg" />
+            Mint <FontAwesomeIcon icon={faLock} size="sm" />
           </span>
         </Button>
         <IconButton
@@ -184,7 +184,7 @@ export default function Frogbar() {
             color="gray"
           >
             <span>
-              Mint <FontAwesomeIcon icon={faLock} size="l" />
+              Mint <FontAwesomeIcon icon={faLock} size="sm" />
             </span>
           </Button>
         </div>
