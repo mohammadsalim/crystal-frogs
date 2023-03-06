@@ -9,6 +9,7 @@ import {
 import { useScrollPosition } from '../hooks/useScrollPosition'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faTwitter, faDiscord } from '@fortawesome/free-brands-svg-icons'
+import { faLock } from '@fortawesome/free-solid-svg-icons'
 import Link from 'next/link'
 import Image from 'next/image'
 
@@ -37,7 +38,7 @@ export default function Frogbar() {
         as="li"
         variant="h3"
         color="blue-gray"
-        className="p-1 uppercase font-chewy"
+        className="p-1 text-green-500 uppercase font-chewy"
       >
         <Link href="#about-section" className="flex items-center" passHref>
           About
@@ -47,7 +48,7 @@ export default function Frogbar() {
         as="li"
         variant="h3"
         color="blue-gray"
-        className="p-1 uppercase font-chewy"
+        className="p-1 text-green-500 uppercase font-chewy"
       >
         <Link href="#trailer-section" className="flex items-center" passHref>
           Trailer
@@ -57,7 +58,7 @@ export default function Frogbar() {
         as="li"
         variant="h3"
         color="blue-gray"
-        className="p-1 uppercase font-chewy"
+        className="p-1 text-purple-900 uppercase font-chewy"
       >
         <Link href="#crystal-section" className="flex items-center" passHref>
           $Crystal
@@ -67,7 +68,7 @@ export default function Frogbar() {
         as="li"
         variant="h3"
         color="blue-gray"
-        className="p-1 uppercase font-chewy"
+        className="p-1 text-green-500 uppercase font-chewy"
       >
         <Link href="#roadmap-section" className="flex items-center" passHref>
           Roadmap
@@ -77,7 +78,7 @@ export default function Frogbar() {
         as="li"
         variant="h3"
         color="blue-gray"
-        className="p-1 uppercase font-chewy"
+        className="p-1 text-green-500 uppercase font-chewy"
       >
         <Link href="#team-section" className="flex items-center" passHref>
           Team
@@ -105,19 +106,34 @@ export default function Frogbar() {
             height={100}
           />
         </Link>
-        <IconButton color="blue" variant="text">
-          <FontAwesomeIcon icon={faTwitter} size="xl" />
-        </IconButton>
-        <IconButton color="purple" variant="text">
-          <FontAwesomeIcon icon={faDiscord} size="xl" />
-        </IconButton>
+        <a
+          target="_blank"
+          href="https://twitter.com/crystalfrogsnft"
+          rel="noopener noreferrer"
+        >
+          <IconButton color="blue" variant="text" size="lg">
+            <FontAwesomeIcon icon={faTwitter} size="xl" />
+          </IconButton>
+        </a>
+        <a
+          target="_blank"
+          href="https://discord.gg/crystalfrogs"
+          rel="noopener noreferrer"
+        >
+          <IconButton color="deep-purple" variant="text" size="lg">
+            <FontAwesomeIcon icon={faDiscord} size="sm" />
+          </IconButton>
+        </a>
         <div className="hidden lg:block">{navList}</div>
         <Button
           variant="gradient"
           size="lg"
           className="hidden lg:inline-block font-chewy"
+          color="gray"
         >
-          <span>Mint</span>
+          <span>
+            Mint <FontAwesomeIcon icon={faLock} size="lg" />
+          </span>
         </Button>
         <IconButton
           variant="text"
@@ -165,8 +181,11 @@ export default function Frogbar() {
             size="lg"
             fullWidth
             className="mb-2 font-chewy"
+            color="gray"
           >
-            <span>Mint</span>
+            <span>
+              Mint <FontAwesomeIcon icon={faLock} size="l" />
+            </span>
           </Button>
         </div>
       </MobileNav>

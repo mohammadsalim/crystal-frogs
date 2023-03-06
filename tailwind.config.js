@@ -19,8 +19,21 @@ module.exports = withMT({
         'brand-light': 'var(--clr-light)',
         'brand-background': 'var(--clr-background)'
       },
+      keyframes: {
+        'moving-line': {
+          from: {
+            width: '0px',
+            opacity: '0'
+          },
+          to: {
+            width: '30%',
+            opacity: '0.6'
+          }
+        }
+      },
       animation: {
-        'pulse-slow': 'pulse 10s linear infinite'
+        'pulse-slow': 'pulse 10s linear infinite',
+        'moving-line': 'moving-line .8s ease .5s forwards'
       }
     }
   },

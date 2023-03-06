@@ -10,12 +10,7 @@ import {
   Button
 } from '@material-tailwind/react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import {
-  faGithubAlt,
-  faGoogle,
-  faFacebook,
-  faTwitter
-} from '@fortawesome/free-brands-svg-icons'
+import { faTwitter } from '@fortawesome/free-brands-svg-icons'
 
 // components
 import Frogbar from '../components/Frogbar.js'
@@ -23,7 +18,6 @@ import Frogbar from '../components/Frogbar.js'
 // images
 import Logo from '/public/images/Logo.gif'
 import SampleFrogs from '/public/images/sample-frogs.gif'
-import LogoBanner from '/public/images/logo-banner.png'
 import CarChase from '/public/images/carchase.gif'
 import MintInfo from '/public/images/mint-info.gif'
 import Roadmap from '/public/images/roadmap.jpg'
@@ -32,16 +26,13 @@ import Glossary from '/public/images/glossary.png'
 import Staking from '/public/images/staking.png'
 import TokenUtility from '/public/images/token-utility.png'
 import Throw from '/public/images/Throw.gif'
+import TraitsSk8r from '/public/images/traitsskateboard.gif'
 
 import { config } from '../dapp.config'
 
 export default function Home() {
   return (
     <div className="flex flex-col items-center justify-center w-full h-full min-h-screen">
-      <img
-        src="/images/Crystals-Float.gif"
-        className="absolute inset-auto block object-cover w-full min-h-screen bg-center bg-no-repeat bg-cover object-fixed animate-pulse-slow"
-      />
       <Head>
         <title>{config.title}</title>
         <meta name="description" content={config.description} />
@@ -107,7 +98,7 @@ export default function Home() {
 
       <section className="px-4 pt-20 pb-48">
         <div className="container flex flex-col items-center mx-auto">
-          <Image src={MintInfo} alt="Mint" />
+          <Image src={MintInfo} className="rounded-2xl" alt="Mint" />
         </div>
       </section>
 
@@ -117,7 +108,7 @@ export default function Home() {
         id="trailer-section"
       >
         <iframe
-          className="w-full max-h-full border border-gray-200 rounded-lg dark:border-gray-700"
+          className="w-full max-h-full border border-gray-200 rounded-2xl dark:border-gray-700"
           width="1280"
           height="720"
           src="https://www.youtube.com/embed/xL4HzwmVkVg?mute=1&autoplay=1"
@@ -131,31 +122,42 @@ export default function Home() {
       {/*$Crystal*/}
       <section className="px-4 pt-20 pb-48" id="crystal-section">
         <div className="container flex flex-col items-center mx-auto">
-          <Image src={Staking} alt="Staking $Crystal" />
+          <Image src={Staking} className="rounded-2xl" alt="Staking $Crystal" />
         </div>
         <div className="container flex flex-col items-center mx-auto">
-          <Image src={Glossary} alt="Glossary" />
+          <Image src={Glossary} className="rounded-2xl" alt="Glossary" />
         </div>
         <div className="container flex flex-col items-center mx-auto">
-          <Image src={TokenUtility} alt="Token Utility" />
+          <Image
+            src={TokenUtility}
+            className="rounded-2xl"
+            alt="Token Utility"
+          />
+        </div>
+        <div className="container flex flex-col items-center mx-auto">
+          <Image src={Throw} className="rounded-2xl" alt="Throw Crystal" />
         </div>
       </section>
-
-      <div className="container flex flex-col items-center mx-auto">
-        <Image src={Throw} alt="Throw Crystal" />
-      </div>
 
       {/*Roadmap*/}
       <section className="px-4 pt-20 pb-48" id="roadmap-section">
         <div className="container flex flex-col items-center mx-auto">
-          <Image src={Roadmap} alt="Roadmap" />
+          <Image src={Roadmap} className="rounded-2xl" alt="Roadmap" />
         </div>
       </section>
+
+      <div className="container flex flex-col items-center mx-auto">
+        <Image
+          src={TraitsSk8r}
+          className="rounded-2xl"
+          alt="Staking $Crystal"
+        />
+      </div>
 
       {/*Team*/}
       <section className="px-4 pt-20 pb-48" id="team-section">
         <div className="container flex flex-col items-center mx-auto">
-          <h2 className="text-2xl font-bold uppercase md:text-4xl">
+          <h2 className="text-2xl font-bold text-green-500 uppercase md:text-4xl">
             Meet The Team
           </h2>
           <div className="grid grid-cols-1 gap-12 mt-24 gap-x-24 md:grid-cols-2 xl:grid-cols-4">
@@ -169,29 +171,31 @@ export default function Home() {
               <Typography
                 variant="h5"
                 color="blue-gray"
-                className="mt-6 mb-1 font-chewy"
+                className="mt-6 mb-1 text-blue-500 font-chewy"
               >
                 Mr Roboto
               </Typography>
-              <Typography
-                variant="lead"
-                className="font-chewy text-blue-gray-500"
-              >
+              <Typography variant="lead" className="text-green-500 font-chewy">
                 Founder, Community Leader, Project Director
               </Typography>
               <Typography
                 variant="paragraph"
-                className="font-chewy text-blue-gray-300"
+                className="font-chewy text-blue-gray-500"
               >
                 Published comic artist & short fiction writer, CRW major, dog
                 dad, Discord addict
               </Typography>
               <div className="mx-auto mt-5">
-                <div className="flex items-center gap-2">
+                <a
+                  className="flex items-center gap-2"
+                  target="_blank"
+                  href="https://twitter.com/mrrobotoeth"
+                  rel="noopener noreferrer"
+                >
                   <IconButton color="blue" variant="text">
                     <FontAwesomeIcon icon={faTwitter} size="xl" />
                   </IconButton>
-                </div>
+                </a>
               </div>
             </Card>
 
@@ -205,29 +209,31 @@ export default function Home() {
               <Typography
                 variant="h5"
                 color="blue-gray"
-                className="mt-6 mb-1 font-chewy"
+                className="mt-6 mb-1 text-blue-500 font-chewy"
               >
                 Dave
               </Typography>
-              <Typography
-                variant="lead"
-                className="font-chewy text-blue-gray-500"
-              >
+              <Typography variant="lead" className="text-green-500 font-chewy">
                 Founder, Artist, Creative Director
               </Typography>
               <Typography
                 variant="paragraph"
-                className="font-chewy text-blue-gray-300"
+                className="font-chewy text-blue-gray-500"
               >
                 Professional 2D animator with 5 years of studio
                 experience--Disney XD, Amazon, & Netflix
               </Typography>
               <div className="mx-auto mt-5">
-                <div className="flex items-center gap-2">
+                <a
+                  className="flex items-center gap-2"
+                  target="_blank"
+                  href="https://twitter.com/crystalfrogsnft"
+                  rel="noopener noreferrer"
+                >
                   <IconButton color="blue" variant="text">
                     <FontAwesomeIcon icon={faTwitter} size="xl" />
                   </IconButton>
-                </div>
+                </a>
               </div>
             </Card>
 
@@ -241,29 +247,31 @@ export default function Home() {
               <Typography
                 variant="h5"
                 color="blue-gray"
-                className="mt-6 mb-1 font-chewy"
+                className="mt-6 mb-1 text-blue-500 font-chewy"
               >
                 WzrdSlim
               </Typography>
-              <Typography
-                variant="lead"
-                className="font-chewy text-blue-gray-500"
-              >
+              <Typography variant="lead" className="text-green-500 font-chewy">
                 Developer, Wizard
               </Typography>
               <Typography
                 variant="paragraph"
-                className="font-chewy text-blue-gray-300"
+                className="font-chewy text-blue-gray-500"
               >
                 Software Engineer- SuperRare Labs, Genesis Dragons, Pixel
                 Protos. Creative techie who streams
               </Typography>
               <div className="mx-auto mt-5">
-                <div className="flex items-center gap-2">
+                <a
+                  className="flex items-center gap-2"
+                  target="_blank"
+                  href="https://twitter.com/wzrdslim"
+                  rel="noopener noreferrer"
+                >
                   <IconButton color="blue" variant="text">
                     <FontAwesomeIcon icon={faTwitter} size="xl" />
                   </IconButton>
-                </div>
+                </a>
               </div>
             </Card>
 
@@ -277,29 +285,31 @@ export default function Home() {
               <Typography
                 variant="h5"
                 color="blue-gray"
-                className="mt-6 mb-1 font-chewy"
+                className="mt-6 mb-1 text-blue-500 font-chewy"
               >
                 CtrlRoss
               </Typography>
-              <Typography
-                variant="lead"
-                className="font-chewy text-blue-gray-500"
-              >
+              <Typography variant="lead" className="text-green-500 font-chewy">
                 Collab Manager
               </Typography>
               <Typography
                 variant="paragraph"
-                className="font-chewy text-blue-gray-300"
+                className="font-chewy text-blue-gray-500"
               >
                 Experienced Artist & Collaborator- CTRL+, Pixel Protos, Genesis
                 Dragons. Anime nerd
               </Typography>
               <div className="mx-auto mt-5">
-                <div className="flex items-center gap-2">
+                <a
+                  className="flex items-center gap-2"
+                  target="_blank"
+                  href="https://twitter.com/ctrlross"
+                  rel="noopener noreferrer"
+                >
                   <IconButton color="blue" variant="text">
                     <FontAwesomeIcon icon={faTwitter} size="xl" />
                   </IconButton>
-                </div>
+                </a>
               </div>
             </Card>
 
@@ -313,29 +323,31 @@ export default function Home() {
               <Typography
                 variant="h5"
                 color="blue-gray"
-                className="mt-6 mb-1 font-chewy"
+                className="mt-6 mb-1 text-blue-500 font-chewy"
               >
                 Blurr
               </Typography>
-              <Typography
-                variant="lead"
-                className="font-chewy text-blue-gray-500"
-              >
+              <Typography variant="lead" className="text-green-500 font-chewy">
                 Marketing Manager
               </Typography>
               <Typography
                 variant="paragraph"
-                className="font-chewy text-blue-gray-300"
+                className="font-chewy text-blue-gray-500"
               >
                 Marketing Strategy & Creative Direction within web3 / defi /
                 nfts / P2E gaming
               </Typography>
               <div className="mx-auto mt-5">
-                <div className="flex items-center gap-2">
+                <a
+                  className="flex items-center gap-2"
+                  target="_blank"
+                  href="https://twitter.com/blurr_official_"
+                  rel="noopener noreferrer"
+                >
                   <IconButton color="blue" variant="text">
                     <FontAwesomeIcon icon={faTwitter} size="xl" />
                   </IconButton>
-                </div>
+                </a>
               </div>
             </Card>
 
@@ -349,39 +361,46 @@ export default function Home() {
               <Typography
                 variant="h5"
                 color="blue-gray"
-                className="mt-6 mb-1 font-chewy"
+                className="mt-6 mb-1 text-blue-500 font-chewy"
               >
                 Dub
               </Typography>
-              <Typography
-                variant="lead"
-                className="font-chewy text-blue-gray-500"
-              >
+              <Typography variant="lead" className="text-green-500 font-chewy">
                 Advisor
               </Typography>
               <Typography
                 variant="paragraph"
-                className="font-chewy text-blue-gray-300"
+                className="font-chewy text-blue-gray-500"
               >
-                Experienced Community Manager, Buisiness Developer- Slam Land,
-                Riffnode, Soulbound. Plant Wizard
+                Experienced Community Manager, Buisiness Developer. Plant Wizard
               </Typography>
               <div className="mx-auto mt-5">
-                <div className="flex items-center gap-2">
+                <a
+                  className="flex items-center gap-2"
+                  target="_blank"
+                  href="https://twitter.com/uhhdub"
+                  rel="noopener noreferrer"
+                >
                   <IconButton color="blue" variant="text">
                     <FontAwesomeIcon icon={faTwitter} size="xl" />
                   </IconButton>
-                </div>
+                </a>
               </div>
             </Card>
           </div>
         </div>
-      </section>
-
-      <section className="px-4 pt-20 pb-48">
-        <div className="container flex flex-col items-center mx-auto">
-          <Image src={DiscordBanner} alt="Discord" />
-          <Button>Join Us On Discord</Button>
+        <div className="container relative mx-auto">
+          <Image src={DiscordBanner} className="rounded-2xl" alt="Discord" />
+          <button className="absolute inset-0 flex items-center justify-center w-full h-full">
+            <a
+              className="px-6 py-3 font-medium text-white rounded-full bg-brand-purple"
+              target="_blank"
+              href="https://discord.gg/crystalfrogs"
+              rel="noopener noreferrer"
+            >
+              Join Us On Discord
+            </a>
+          </button>
         </div>
       </section>
     </div>

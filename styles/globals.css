@@ -64,6 +64,13 @@ html {
   background: var(--clr-light);
 }
 
+body {
+  background-image: url('/images/Crystals-Float.gif');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
 ::selection {
   background: var(--clr-selection-bg);
   color: var(--clr-selection-text);
