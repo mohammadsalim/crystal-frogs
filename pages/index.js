@@ -51,8 +51,7 @@ export default function Home() {
       <section className="px-4 pt-20 pb-48">
         <div className="container flex flex-col items-center mx-auto">
           <video className="w-full h-auto max-w-full border border-gray-200 rounded-lg dark:border-gray-700" autoPlay muted controls>
-            <source src="./images/trailer.mp4" type="video/mp4"></source>
-              Your browser does not support the video tag.
+            <source src="https://drive.google.com/file/d/1em-LTO0g8iQRaxjsxH5SVjkvK9KrbwMO/view?usp=share_link" type="video/mp4"/>
           </video>
         </div>
       </section>
