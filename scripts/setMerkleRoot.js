@@ -9,12 +9,20 @@ const hre = require('hardhat')
 const { MerkleTree } = require('merkletreejs')
 const keccak256 = require('keccak256')
 const whitelist = require('./whitelist.js')
+const freeWhitelist = require('./freeWhitelist.js')
 
 async function main() {
   const nftFactory = await hre.ethers.getContractFactory('CrystalFrogs')
   const nftContract = await nftFactory.attach(
-    '0x7d0DbfDfb89434aC04bF03e60EFD0dF9DB2D00C4' // Deployed contract address
+    '0xbe6dA81B28a5E0d926F17Df0b18701505CB6d81D' // Deployed contract address
   )
+
+  // Re-calculate merkle root from the freeWhitelist array.
+  const freeLeafNodes = freeWhitelist.map((addr) => keccak256(addr))
+  const freeMerkleTree = new MerkleTree(freeLeafNodes, keccak256, {
+    sortPairs: true
+  })
+  const freeRoot = freeMerkleTree.getRoot()
 
   // Re-calculate merkle root from the whitelist array.
   const leafNodes = whitelist.map((addr) => keccak256(addr))
@@ -22,8 +30,13 @@ async function main() {
   const root = merkleTree.getRoot()
 
   // Set the re-calculated merkle root to the contract.
-  await nftContract.setMerkleRoot(root)
-  console.log('Whitelist root set to:', root)
+  // Comment out root not being used
+
+  await nftContract.setFreeMerkleRoot(freeRoot)
+  // await nftContract.setMerkleRoot(root)
+
+  console.log('FreeWhitelist root set to:', freeRoot)
+  // console.log('Whitelist root set to:', root)
 }
 
 main()
