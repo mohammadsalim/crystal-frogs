@@ -37,7 +37,7 @@ export default function Home() {
       <Head>
         <title>{config.title}</title>
         <meta name="description" content={config.description} />
-        <meta name="fortmatic-site-verification" content="kCCo1QRyGsaIM4mc" />
+        <meta name="fortmatic-site-verification" content="IPQialT8aiiQKeyp" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
 

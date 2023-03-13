@@ -34,7 +34,7 @@ async function main() {
     BASE_URI,
     root,
     freeRoot,
-    proxyRegistryAddressGoerli
+    proxyRegistryAddressMainnet
   )
 
   await crystalFrogs.deployed()

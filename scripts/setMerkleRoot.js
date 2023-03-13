@@ -14,7 +14,7 @@ const freeWhitelist = require('./freeWhitelist.js')
 async function main() {
   const nftFactory = await hre.ethers.getContractFactory('CrystalFrogs')
   const nftContract = await nftFactory.attach(
-    '0xa07BB76D93891437084cb71fd3183BbB3a35B15a' // Deployed contract address
+    '0x78627C6798b9Db51Ca48dea1ff6ce0f5C5a66F81' // Deployed contract address
   )
 
   // Re-calculate merkle root from the freeWhitelist array.
@@ -32,11 +32,11 @@ async function main() {
   // Set the re-calculated merkle root to the contract.
   // Comment out root not being used
 
-  // await nftContract.setFreeMerkleRoot(freeRoot)
-  await nftContract.setMerkleRoot(root)
+  await nftContract.setFreeMerkleRoot(freeRoot)
+  // await nftContract.setMerkleRoot(root)
 
-  // console.log('FreeWhitelist root set to:', freeRoot)
-  console.log('Whitelist root set to:', root)
+  console.log('FreeWhitelist root set to:', freeRoot)
+  // console.log('Whitelist root set to:', root)
 }
 
 main()
