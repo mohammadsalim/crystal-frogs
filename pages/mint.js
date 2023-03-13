@@ -238,7 +238,7 @@ export default function Mint() {
                           isPreSale
                             ? config.preSalePrice * mintAmount
                             : config.price * mintAmount
-                        ).toFixed(2)}{' '}
+                        ).toFixed(3)}{' '}
                         ETH
                       </p>{' '}
                       <span className="text-gray-400">+ GAS</span>
