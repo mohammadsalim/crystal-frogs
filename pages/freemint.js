@@ -154,7 +154,7 @@ export default function Mint() {
               {paused
                 ? 'Mint Paused'
                 : isFreeSale
-                ? 'Free-Mint'
+                ? 'Free Mint'
                 : 'Public Mint'}
             </h2>
             <h3 className="text-sm tracking-widest text-pink-200">
