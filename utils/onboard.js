@@ -4,7 +4,7 @@ import walletConnectModule from '@web3-onboard/walletconnect'
 import coinbaseModule from '@web3-onboard/coinbase'
 import fortmaticModule from '@web3-onboard/fortmatic'
 
-import AxialIcon from '../AxialIcon'
+import FrogIcon from '../FrogIcon'
 
 const RPC_URL = process.env.NEXT_PUBLIC_ALCHEMY_RPC_URL
 
@@ -46,7 +46,7 @@ const initOnboard = init({
   ],
   appMetadata: {
     name: 'CrystalFrogs',
-    icon: AxialIcon,
+    icon: FrogIcon,
     description: 'A Community Driven Animated Cartoon',
     recommendedInjectedWallets: [
       { name: 'MetaMask', url: 'https://metamask.io' },
