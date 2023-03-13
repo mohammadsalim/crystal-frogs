@@ -151,7 +151,11 @@ export default function Mint() {
               Crystal Frogs
             </h1>
             <h2 className="mt-3 text-2xl font-bold text-transparent uppercase font-chewy md:text-2xl bg-gradient-to-br from-brand-green to-brand-blue bg-clip-text">
-              {paused ? 'Mint Paused' : isFreeSale ? 'Pre-Mint' : 'Public Mint'}
+              {paused
+                ? 'Mint Paused'
+                : isFreeSale
+                ? 'Free-Mint'
+                : 'Public Mint'}
             </h2>
             <h3 className="text-sm tracking-widest text-pink-200">
               {wallet?.accounts[0]?.address
