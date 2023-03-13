@@ -163,7 +163,7 @@ export const presaleMint = async (mintAmount) => {
     to: config.contractAddress,
     from: window.ethereum.selectedAddress,
     value: parseInt(
-      web3.utils.toWei(String(config.price * mintAmount), 'ether')
+      web3.utils.toWei(String(config.preSalePrice * mintAmount), 'ether')
     ).toString(16), // hex
     data: nftContract.methods
       .preSaleMint(window.ethereum.selectedAddress, mintAmount, proof)

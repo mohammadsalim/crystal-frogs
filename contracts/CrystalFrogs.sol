@@ -27,12 +27,12 @@ contract CrystalFrogs is
     uint256 public maxSupply = 5000;
 
     string public baseURI;
-    string public notRevealedUri = "ipfs://Qmbth1DdxejM5qwCLrr7mPXmWPV4qdEzPCU2fB3kSmuccn/hidden.json";
+    string public notRevealedUri = "ipfs://QmS3BTMyVsBUBRTeW5Nt3JQNAD1htGQss1jh7a1DkoULwN/hidden.json";
     string public baseExtension = ".json";
 
-    bool public paused = true;
+    bool public paused = false;
     bool public revealed = false;
-    bool public freesaleM = false;
+    bool public freesaleM = true;
     bool public presaleM = false;
     bool public publicM = false;
 
@@ -50,11 +50,11 @@ contract CrystalFrogs is
     uint256[] private _teamShares = [20, 21, 21, 22, 11, 5];
     address[] private _team = [
         0x78555568A00445cc6EaAF8597A01Af7e2Bc626A8, // Test Project Funds Account gets 20% of the total revenue
-        0x795f8fcF04726557f126799545Fc4B0d1C49b058, // Test Artist Account gets 21% of the total revenue
-        0x118dd453DEDb56461630042b5C45ADF9BeEd9bEE, // Test Project Director Account gets 21% of the total revenue
-        0xc1B8dc8291b51e11DA438743bE806c7D30fb0Bd3, // Test Developer Account gets 22% of the total revenue
-        0x46dbdC19a77c5bA6eFf83cC33dbbe41ff9C9F41b, // Test Marketing Manager Account gets 11% of the total revenue
-        0x2C03454F34D8515A803BCbB711aA37EC6a88F148 // Test Collab Manager Account gets 5% of the total revenue
+        0xAaa17208f95E0a5bC44c40A583D45d4DbC275E43, // Artist Account gets 21% of the total revenue
+        0xc1eB5AcD614312bac05Dc8595C18fed3bA043F24, // Project Director Account gets 21% of the total revenue
+        0xf0318A36043A19d2A3690E88094C27a206fDf830, // Developer Account gets 22% of the total revenue
+        0xb041070b850cFCF17f1caC0bd23ACeB616bD6B38, // Marketing Manager Account gets 11% of the total revenue
+        0xaf29ab7418516cc3F22E609dC783D75864AB545a // Collab Manager Account gets 5% of the total revenue
     ];
 
     constructor(string memory uri, bytes32 merkleroot, bytes32 freeMerkleRoot, address _proxyRegistryAddress)
