@@ -49,7 +49,7 @@ contract CrystalFrogs is
 
     uint256[] private _teamShares = [20, 21, 21, 22, 11, 5];
     address[] private _team = [
-        0x78555568A00445cc6EaAF8597A01Af7e2Bc626A8, // Test Project Funds Account gets 20% of the total revenue
+        0x8bcF63c62d2E5d4718F0f0B49c544550a9372aC1, // Test Project Funds Account gets 20% of the total revenue
         0xAaa17208f95E0a5bC44c40A583D45d4DbC275E43, // Artist Account gets 21% of the total revenue
         0xc1eB5AcD614312bac05Dc8595C18fed3bA043F24, // Project Director Account gets 21% of the total revenue
         0xf0318A36043A19d2A3690E88094C27a206fDf830, // Developer Account gets 22% of the total revenue

@@ -1,7 +1,7 @@
 const config = {
   title: 'Crystal Frogs',
   description: 'A Community Driven Animated Cartoon',
-  contractAddress: '0xF3bd7471959C5B2914052d10d4eBfdF1ddC432D3',
+  contractAddress: '0xa07BB76D93891437084cb71fd3183BbB3a35B15a',
   maxMintAmount: 5,
   freesaleMaxMintAmount: 5,
   presaleMaxMintAmount: 3,
