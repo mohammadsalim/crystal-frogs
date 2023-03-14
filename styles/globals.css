@@ -6,13 +6,13 @@
 :root {
   --font-family: 'Chewy', sans-serif;
   --clr-light: #ebfbff;
-  --clr-purple: #454393;
-  --clr-pink: #f15bb5;
-  --clr-yellow: #fee440;
-  --clr-blue: #1a88ff;
+  --clr-purple: #a192fb;
+  --clr-pink: #ffa5e5;
+  --clr-yellow: #fde88f;
+  --clr-blue: #acfbff;
   --clr-green: #35c07d;
   --clr-orange: #ffac80;
-  --clr-selection-bg: #a6ff00;
+  --clr-selection-bg: #8ef87c;
   --clr-selection-text: #121212;
   --clr-background: #dbf8ff;
 

@@ -130,7 +130,7 @@ export default function Mint() {
       <div className="relative flex flex-col items-center justify-center w-full h-full">
         <img
           src="/images/Crystals-Float.gif"
-          className="absolute inset-auto block object-cover w-full min-h-screen animate-pulse-slow"
+          className="absolute inset-auto block object-cover w-full min-h-screen"
         />
 
         <div className="flex flex-col items-center justify-center w-full h-full px-2 md:px-10">
@@ -147,17 +147,17 @@ export default function Mint() {
                 Disconnect
               </button>
             )}
-            <h1 className="mt-3 text-3xl font-bold text-transparent uppercase font-chewy md:text-4xl bg-gradient-to-br from-brand-pink to-brand-purple bg-clip-text">
+            <h1 className="mt-3 text-3xl font-bold text-transparent uppercase font-chewy md:text-4xl bg-gradient-to-br from-brand-green to-brand-yellow bg-clip-text">
               Crystal Frogs
             </h1>
-            <h2 className="mt-3 text-2xl font-bold text-transparent uppercase font-chewy md:text-2xl bg-gradient-to-br from-brand-green to-brand-blue bg-clip-text">
+            <h2 className="mt-3 text-2xl font-bold text-transparent uppercase font-chewy md:text-2xl bg-gradient-to-br from-brand-purple to-brand-pink bg-clip-text">
               {paused
                 ? 'Mint Paused'
                 : isFreeSale
                 ? 'Free Mint'
                 : 'Public Mint'}
             </h2>
-            <h3 className="text-sm tracking-widest text-pink-200">
+            <h3 className="text-sm tracking-widest text-brand-blue">
               {wallet?.accounts[0]?.address
                 ? wallet?.accounts[0]?.address.slice(0, 8) +
                   '...' +
@@ -184,31 +184,7 @@ export default function Mint() {
               <div className="flex flex-col items-center w-full px-4 mt-16 md:mt-0">
                 <div className="flex items-center justify-between w-full font-chewy">
                   <button
-                    className="flex items-center justify-center h-10 font-bold bg-gray-300 rounded-md w-14 md:w-16 md:h-12 text-brand-background hover:shadow-lg"
-                    onClick={incrementMintAmount}
-                  >
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      className="w-6 h-6 md:h-8 md:w-8"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      stroke="currentColor"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth={2}
-                        d="M12 6v6m0 0v6m0-6h6m-6 0H6"
-                      />
-                    </svg>
-                  </button>
-
-                  <p className="flex items-center justify-center flex-1 text-3xl font-bold text-center grow text-brand-pink md:text-4xl">
-                    {mintAmount}
-                  </p>
-
-                  <button
-                    className="flex items-center justify-center h-10 font-bold bg-gray-300 rounded-md w-14 md:w-16 md:h-12 text-brand-background hover:shadow-lg"
+                    className="flex items-center justify-center h-10 font-bold rounded-md bg-brand-purple w-14 md:w-16 md:h-12 text-brand-background hover:shadow-lg"
                     onClick={decrementMintAmount}
                   >
                     <svg
@@ -226,9 +202,33 @@ export default function Mint() {
                       />
                     </svg>
                   </button>
+
+                  <p className="flex items-center justify-center flex-1 text-3xl font-bold text-center grow text-brand-pink md:text-4xl">
+                    {mintAmount}
+                  </p>
+
+                  <button
+                    className="flex items-center justify-center h-10 font-bold rounded-md bg-brand-purple w-14 md:w-16 md:h-12 text-brand-background hover:shadow-lg"
+                    onClick={incrementMintAmount}
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      className="w-6 h-6 md:h-8 md:w-8"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M12 6v6m0 0v6m0-6h6m-6 0H6"
+                      />
+                    </svg>
+                  </button>
                 </div>
 
-                <p className="mt-3 text-sm tracking-widest text-pink-200">
+                <p className="mt-3 text-sm tracking-widest text-brand-blue">
                   Max Mint Amount: {maxMintAmount}
                 </p>
 
@@ -256,7 +256,7 @@ export default function Mint() {
                     className={` ${
                       paused || isMinting
                         ? 'bg-gray-900 cursor-not-allowed'
-                        : 'bg-gradient-to-br from-brand-purple to-brand-pink shadow-lg hover:shadow-pink-400/50'
+                        : 'bg-gradient-to-br from-brand-pink to-brand-purple shadow-lg hover:shadow-pink-400/50'
                     } font-chewy mt-12 w-full px-6 py-3 rounded-md text-2xl text-white  mx-4 tracking-wide uppercase`}
                     disabled={paused || isMinting}
                     onClick={
@@ -291,14 +291,14 @@ export default function Mint() {
 
             {/* Contract Address */}
             <div className="flex flex-col items-center w-full py-2 mt-10 border-t border-gray-800">
-              <h3 className="mt-6 text-2xl uppercase font-chewy text-brand-pink">
+              <h3 className="mt-6 text-2xl uppercase font-chewy text-brand-purple">
                 Contract Address
               </h3>
               <a
                 href={`https://etherscan.io/address/${config.contractAddress}#readContract`}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="mt-4 text-gray-400"
+                className="mt-4 text-brand-blue"
               >
                 <span className="break-all ...">{config.contractAddress}</span>
               </a>
