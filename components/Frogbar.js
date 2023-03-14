@@ -9,7 +9,7 @@ import {
 import { useScrollPosition } from '../hooks/useScrollPosition'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faTwitter, faDiscord } from '@fortawesome/free-brands-svg-icons'
-import { faLock } from '@fortawesome/free-solid-svg-icons'
+import { faFrog } from '@fortawesome/free-solid-svg-icons'
 import Link from 'next/link'
 import Image from 'next/image'
 
@@ -102,8 +102,8 @@ export default function Frogbar() {
             className="mr-4 py-1.5 cursor-pointer active:scale-90"
             src={Logo}
             alt="Logo"
-            width={100}
-            height={100}
+            width={120}
+            height={120}
           />
         </Link>
         <a
@@ -125,16 +125,18 @@ export default function Frogbar() {
           </IconButton>
         </a>
         <div className="hidden lg:block">{navList}</div>
-        <Button
-          variant="gradient"
-          size="lg"
-          className="hidden lg:inline-block font-chewy"
-          color="gray"
-        >
-          <span className="text-lg font-bold uppercase md:text-xl">
-            Mint <FontAwesomeIcon icon={faLock} size="sm" />
-          </span>
-        </Button>
+        <Link href="/mint">
+          <Button
+            variant="gradient"
+            size="lg"
+            className="hidden lg:inline-block font-chewy"
+            color="indigo"
+          >
+            <span className="text-lg font-bold tracking-wide uppercase md:text-xl">
+              <FontAwesomeIcon icon={faFrog} size="sm" /> Mint
+            </span>
+          </Button>
+        </Link>
         <IconButton
           variant="text"
           className="w-6 h-6 ml-auto text-inherit hover:bg-transparent focus:bg-transparent active:bg-transparent lg:hidden"
@@ -176,17 +178,19 @@ export default function Frogbar() {
       <MobileNav open={openNav}>
         <div className="container mx-auto">
           {navList}
-          <Button
-            variant="gradient"
-            size="lg"
-            fullWidth
-            className="mb-2 font-chewy"
-            color="gray"
-          >
-            <span className="text-xl font-bold uppercase md:text-2xl">
-              Mint <FontAwesomeIcon icon={faLock} size="sm" />
-            </span>
-          </Button>
+          <Link href="/mint">
+            <Button
+              variant="gradient"
+              size="lg"
+              fullWidth
+              className="mb-2 font-chewy"
+              color="indigo"
+            >
+              <span className="text-xl font-bold tracking-wide uppercase md:text-2xl">
+                <FontAwesomeIcon icon={faFrog} size="sm" /> Mint
+              </span>
+            </Button>
+          </Link>
         </div>
       </MobileNav>
     </Navbar>

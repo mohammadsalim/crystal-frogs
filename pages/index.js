@@ -11,7 +11,7 @@ import {
 } from '@material-tailwind/react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faTwitter } from '@fortawesome/free-brands-svg-icons'
-import { faLock } from '@fortawesome/free-solid-svg-icons'
+import { faFrog } from '@fortawesome/free-solid-svg-icons'
 
 // components
 import Frogbar from '../components/Frogbar.js'
@@ -52,17 +52,19 @@ export default function Home() {
       >
         <div className="flex flex-col items-center w-full max-w-4xl">
           <Image src={Logo} alt="Banner" />
-          <Button
-            fullWidth
-            variant="gradient"
-            size="lg"
-            className="mt-16 font-chewy"
-            color="gray"
-          >
-            <span className="text-2xl font-bold uppercase md:text-3xl">
-              Mint <FontAwesomeIcon icon={faLock} size="sm" />
-            </span>
-          </Button>
+          <Link href="/mint">
+            <Button
+              fullWidth
+              variant="gradient"
+              size="lg"
+              className="mt-16 font-chewy"
+              color="indigo"
+            >
+              <span className="text-2xl font-bold tracking-wide uppercase md:text-3xl">
+                <FontAwesomeIcon icon={faFrog} size="sm" /> Mint
+              </span>
+            </Button>
+          </Link>
           <div className="flex flex-col items-center w-full space-y-10 md:flex-row md:space-x-16">
             <div className="flex flex-col items-center justify-center px-4 py-10 text-center text-gray-800 md:items-start font-chewy md:px-0 mt-14">
               <Typography className="mt-6 text-2xl font-bold uppercase md:text-4xl font-chewy">
