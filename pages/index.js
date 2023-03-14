@@ -59,7 +59,7 @@ export default function Home() {
             className="mt-16 font-chewy"
             color="gray"
           >
-            <span>
+            <span className="text-2xl font-bold uppercase md:text-3xl">
               Mint <FontAwesomeIcon icon={faLock} size="sm" />
             </span>
           </Button>

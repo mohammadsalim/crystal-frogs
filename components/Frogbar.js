@@ -131,7 +131,7 @@ export default function Frogbar() {
           className="hidden lg:inline-block font-chewy"
           color="gray"
         >
-          <span>
+          <span className="text-lg font-bold uppercase md:text-xl">
             Mint <FontAwesomeIcon icon={faLock} size="sm" />
           </span>
         </Button>
@@ -183,7 +183,7 @@ export default function Frogbar() {
             className="mb-2 font-chewy"
             color="gray"
           >
-            <span>
+            <span className="text-xl font-bold uppercase md:text-2xl">
               Mint <FontAwesomeIcon icon={faLock} size="sm" />
             </span>
           </Button>
