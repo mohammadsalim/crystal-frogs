@@ -11,6 +11,7 @@ import {
 } from '@material-tailwind/react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faTwitter } from '@fortawesome/free-brands-svg-icons'
+import { faLock } from '@fortawesome/free-solid-svg-icons'
 
 // components
 import Frogbar from '../components/Frogbar.js'
@@ -49,16 +50,27 @@ export default function Home() {
       >
         <div className="flex flex-col items-center w-full max-w-4xl">
           <Image src={Logo} alt="Banner" />
+          <Button
+            fullWidth
+            variant="gradient"
+            size="lg"
+            className="mt-16 font-chewy"
+            color="gray"
+          >
+            <span>
+              Mint <FontAwesomeIcon icon={faLock} size="sm" />
+            </span>
+          </Button>
           <div className="flex flex-col items-center w-full space-y-10 md:flex-row md:space-x-16">
             <div className="flex flex-col items-center justify-center px-4 py-10 text-center text-gray-800 md:items-start font-chewy md:px-0 mt-14">
               <Typography className="mt-6 text-2xl font-bold uppercase md:text-4xl font-chewy">
                 ✨ Crystal Frogs is a{' '}
-                <span className="text-green-500">
+                <span className="text-brand-green">
                   community-driven animated nft series
                 </span>{' '}
-                on the <span className="text-green-500">Ethereum</span>{' '}
+                on the <span className="text-brand-green">Ethereum</span>{' '}
                 Blockchain. The Collection consists of{' '}
-                <span className="text-green-500">
+                <span className="text-brand-green">
                   5000 programmatically, randomly generated NFTs
                 </span>{' '}
                 from 100s of illustrated traits 🌱 Ribbit! 🐸
@@ -71,19 +83,19 @@ export default function Home() {
             src={SampleFrogs}
             className="object-cover w-64 h-64 rounded-2xl"
           />
-          <Card className="bg-green-500 shadow-lg rounded-2xl shadow-gray-500/10">
+          <Card className="shadow-lg bg-brand-green rounded-2xl shadow-gray-500/10">
             <CardBody className="px-8 text-center">
               <Typography variant="lead" className="text-gray-200 font-chewy">
                 Crystal Frog holders have the opportunity to have their{' '}
-                <span className="text-yellow-200">
+                <span className="text-brand-yellow">
                   NFT featured in the series
                 </span>
                 , decide the narrative direction of the series through{' '}
-                <span className="text-yellow-200">
+                <span className="text-brand-yellow">
                   on-chain voting in a choose-your-own-adventure
                 </span>{' '}
                 poll at the end of each animated short, and have{' '}
-                <span className="text-yellow-200">
+                <span className="text-brand-yellow">
                   exclusive access to the production
                 </span>{' '}
                 of the series
@@ -158,10 +170,10 @@ export default function Home() {
       {/*Team*/}
       <section className="px-4 pt-20 pb-48" id="team-section">
         <div className="container flex flex-col items-center mx-auto">
-          <h2 className="text-2xl font-bold text-green-500 uppercase md:text-4xl">
+          <h2 className="text-2xl font-bold uppercase text-brand-green md:text-4xl">
             Meet The Team
           </h2>
-          <div className="grid grid-cols-1 gap-12 mt-24 gap-x-24 md:grid-cols-2 xl:grid-cols-4">
+          <div className="grid grid-cols-1 gap-12 mt-24 gap-x-24 md:grid-cols-2 xl:grid-cols-3">
             <Card color="transparent" shadow={false} className="text-center">
               <Avatar
                 src="./images/Roboto46.png"
@@ -172,11 +184,14 @@ export default function Home() {
               <Typography
                 variant="h5"
                 color="blue-gray"
-                className="mt-6 mb-1 text-blue-500 font-chewy"
+                className="mt-6 mb-1 text-brand-purple font-chewy"
               >
-                Mr Roboto
+                MrRoboto
               </Typography>
-              <Typography variant="lead" className="text-green-500 font-chewy">
+              <Typography
+                variant="lead"
+                className="text-brand-green font-chewy"
+              >
                 Founder, Community Leader, Project Director
               </Typography>
               <Typography
@@ -210,11 +225,14 @@ export default function Home() {
               <Typography
                 variant="h5"
                 color="blue-gray"
-                className="mt-6 mb-1 text-blue-500 font-chewy"
+                className="mt-6 mb-1 text-brand-purple font-chewy"
               >
                 Dave
               </Typography>
-              <Typography variant="lead" className="text-green-500 font-chewy">
+              <Typography
+                variant="lead"
+                className="text-brand-green font-chewy"
+              >
                 Founder, Artist, Creative Director
               </Typography>
               <Typography
@@ -248,19 +266,22 @@ export default function Home() {
               <Typography
                 variant="h5"
                 color="blue-gray"
-                className="mt-6 mb-1 text-blue-500 font-chewy"
+                className="mt-6 mb-1 text-brand-purple font-chewy"
               >
                 WzrdSlim
               </Typography>
-              <Typography variant="lead" className="text-green-500 font-chewy">
+              <Typography
+                variant="lead"
+                className="text-brand-green font-chewy"
+              >
                 Developer, Wizard
               </Typography>
               <Typography
                 variant="paragraph"
                 className="font-chewy text-blue-gray-500"
               >
-                Software Engineer- SuperRare Labs, Genesis Dragons, Pixel
-                Protos. Creative techie who streams
+                Software Engineer & Digital Creator. Prev @ SuperRare Labs,
+                Genesis Dragons, Pixel Protos
               </Typography>
               <div className="mx-auto mt-5">
                 <a
@@ -286,11 +307,14 @@ export default function Home() {
               <Typography
                 variant="h5"
                 color="blue-gray"
-                className="mt-6 mb-1 text-blue-500 font-chewy"
+                className="mt-6 mb-1 text-brand-purple font-chewy"
               >
                 CtrlRoss
               </Typography>
-              <Typography variant="lead" className="text-green-500 font-chewy">
+              <Typography
+                variant="lead"
+                className="text-brand-green font-chewy"
+              >
                 Collab Manager
               </Typography>
               <Typography
@@ -324,11 +348,14 @@ export default function Home() {
               <Typography
                 variant="h5"
                 color="blue-gray"
-                className="mt-6 mb-1 text-blue-500 font-chewy"
+                className="mt-6 mb-1 text-brand-purple font-chewy"
               >
                 Blurr
               </Typography>
-              <Typography variant="lead" className="text-green-500 font-chewy">
+              <Typography
+                variant="lead"
+                className="text-brand-green font-chewy"
+              >
                 Marketing Manager
               </Typography>
               <Typography
@@ -362,11 +389,14 @@ export default function Home() {
               <Typography
                 variant="h5"
                 color="blue-gray"
-                className="mt-6 mb-1 text-blue-500 font-chewy"
+                className="mt-6 mb-1 text-brand-purple font-chewy"
               >
                 Dub
               </Typography>
-              <Typography variant="lead" className="text-green-500 font-chewy">
+              <Typography
+                variant="lead"
+                className="text-brand-green font-chewy"
+              >
                 Advisor
               </Typography>
               <Typography

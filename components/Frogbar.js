@@ -38,7 +38,7 @@ export default function Frogbar() {
         as="li"
         variant="h3"
         color="blue-gray"
-        className="p-1 text-green-500 uppercase font-chewy"
+        className="p-1 uppercase text-brand-green font-chewy"
       >
         <Link href="#about-section" className="flex items-center" passHref>
           About
@@ -48,7 +48,7 @@ export default function Frogbar() {
         as="li"
         variant="h3"
         color="blue-gray"
-        className="p-1 text-green-500 uppercase font-chewy"
+        className="p-1 uppercase text-brand-green font-chewy"
       >
         <Link href="#trailer-section" className="flex items-center" passHref>
           Trailer
@@ -58,17 +58,17 @@ export default function Frogbar() {
         as="li"
         variant="h3"
         color="blue-gray"
-        className="p-1 text-purple-900 uppercase font-chewy"
+        className="p-1 uppercase text-brand-green font-chewy"
       >
         <Link href="#crystal-section" className="flex items-center" passHref>
-          $Crystal
+          Crystal
         </Link>
       </Typography>
       <Typography
         as="li"
         variant="h3"
         color="blue-gray"
-        className="p-1 text-green-500 uppercase font-chewy"
+        className="p-1 uppercase text-brand-green font-chewy"
       >
         <Link href="#roadmap-section" className="flex items-center" passHref>
           Roadmap
@@ -78,7 +78,7 @@ export default function Frogbar() {
         as="li"
         variant="h3"
         color="blue-gray"
-        className="p-1 text-green-500 uppercase font-chewy"
+        className="p-1 uppercase text-brand-green font-chewy"
       >
         <Link href="#team-section" className="flex items-center" passHref>
           Team
