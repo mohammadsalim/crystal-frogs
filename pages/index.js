@@ -22,13 +22,15 @@ import SampleFrogs from '/public/images/sample-frogs.gif'
 import CarChase from '/public/images/carchase.gif'
 import MintInfo from '/public/images/mint-info.gif'
 import Roadmap from '/public/images/roadmap.jpg'
-import DiscordBanner from '/public/images/discord-banner.png'
-import Glossary from '/public/images/glossary.png'
-import Staking from '/public/images/staking.png'
-import TokenUtility from '/public/images/token-utility.png'
-import Throw from '/public/images/Throw.gif'
+import DiscordBanner from '/public/images/discord-banner.jpg'
+import Glossary from '/public/images/glossary.jpg'
+import Staking from '/public/images/staking.jpg'
+import TokenUtility from '/public/images/token-utility.jpg'
+import Crystals from '/public/images/crystals.gif'
 import TraitsSk8r from '/public/images/traitsskateboard.gif'
 import TruckBois from '/public/images/TruckBois.gif'
+import Singing from '/public/images/singing.gif'
+import Moto from '/public/images/moto.gif'
 
 import { config } from '../dapp.config'
 
@@ -115,6 +117,10 @@ export default function Home() {
         </div>
       </section>
 
+      <div className="container flex flex-col items-center mx-auto">
+        <Image src={Moto} className="rounded-2xl" alt="Truck Bois" />
+      </div>
+
       {/*Trailer*/}
       <section
         className="container flex flex-col items-center w-full h-full max-w-5xl pt-4 mx-auto"
@@ -151,10 +157,11 @@ export default function Home() {
             alt="Token Utility"
           />
         </div>
-        <div className="container flex flex-col items-center mx-auto">
-          <Image src={Throw} className="rounded-2xl" alt="Throw Crystal" />
-        </div>
       </section>
+
+      <div className="container flex flex-col items-center mx-auto">
+        <Image src={Crystals} className="rounded-2xl" alt="Throw Crystal" />
+      </div>
 
       {/*Roadmap*/}
       <section className="px-4 pt-20 pb-48" id="roadmap-section">
@@ -421,7 +428,7 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <div className="container relative mx-auto">
+      <section className="container relative mx-auto mb-16">
         <Image src={DiscordBanner} className="rounded-2xl" alt="Discord" />
         <div className="absolute inset-0 flex items-center justify-center w-full h-full">
           <a
@@ -434,6 +441,10 @@ export default function Home() {
             </Button>
           </a>
         </div>
+      </section>
+
+      <div className="container flex flex-col items-center mx-auto">
+        <Image src={Singing} className="rounded-2xl" alt="Throw Crystal" />
       </div>
     </div>
   )
