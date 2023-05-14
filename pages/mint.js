@@ -11,7 +11,7 @@ import {
   isPreSaleState,
   presaleMint,
   publicMint
-} from '../utils/interact'
+} from '../utils/interactV2'
 
 import MintImage from '../public/images/Incubator.gif'
 

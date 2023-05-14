@@ -1,0 +1,10 @@
+{
+  "_format": "hh-sol-artifact-1",
+  "contractName": "OwnableDelegateProxy",
+  "sourceName": "contracts/CrystalFrogsV2.sol",
+  "abi": [],
+  "bytecode": "0x6080604052348015600f57600080fd5b50603f80601d6000396000f3fe6080604052600080fdfea26469706673582212207115df6e0d2fe4edd96122b7f84a8e6eca90d3d27247c0095081fb9d6dd152ba64736f6c63430008090033",
+  "deployedBytecode": "0x6080604052600080fdfea26469706673582212207115df6e0d2fe4edd96122b7f84a8e6eca90d3d27247c0095081fb9d6dd152ba64736f6c63430008090033",
+  "linkReferences": {},
+  "deployedLinkReferences": {}
+}

@@ -36,6 +36,7 @@
     "keccak256": "^1.0.6",
     "merkletreejs": "^0.2.31",
     "next": "^12.3.4",
+    "operator-filter-registry": "^1.4.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-scripts": "4.0.3"
