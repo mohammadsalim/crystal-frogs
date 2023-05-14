@@ -8,7 +8,8 @@ const config = {
   genesissaleMaxMintAmount: 5,
   price: 0,
   freePrice: 0,
-  preSalePrice: 0
+  preSalePrice: 0,
+  genesisPrice: 0
 }
 
 export { config }
