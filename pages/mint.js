@@ -166,7 +166,7 @@ export default function Mint() {
                 <div className="absolute z-10 flex items-center justify-center px-4 py-2 text-base font-semibold text-white bg-black border rounded-md font-chewy top-2 left-2 opacity-80 filter backdrop-blur-lg border-brand-purple">
                   <p>
                     <span className="text-brand-pink">{totalMinted}</span> /{' '}
-                    {400}
+                    {maxSupply}
                   </p>
                 </div>
 
@@ -238,7 +238,7 @@ export default function Mint() {
                           isPreSale
                             ? config.preSalePrice * mintAmount
                             : config.price * mintAmount
-                        ).toFixed(3)}{' '}
+                        ).toFixed(2)}{' '}
                         ETH
                       </p>{' '}
                       <span className="text-gray-400">+ GAS</span>

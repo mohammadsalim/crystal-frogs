@@ -8,10 +8,10 @@ import {
   getMaxSupply,
   isPausedState,
   isPublicSaleState,
-  isFreeSaleState,
-  freesaleMint,
+  isGenesisSaleState,
+  genesissaleMint,
   publicMint
-} from '../utils/interact'
+} from '../utils/interactV2'
 
 import MintImage from '../public/images/Incubator.gif'
 
@@ -25,7 +25,7 @@ export default function Mint() {
   const [maxMintAmount, setMaxMintAmount] = useState(0)
   const [paused, setPaused] = useState(false)
   const [isPublicSale, setIsPublicSale] = useState(false)
-  const [isFreeSale, setIsFreeSale] = useState(false)
+  const [isGenesisSale, setIsGenesisSale] = useState(false)
 
   const [status, setStatus] = useState(null)
   const [mintAmount, setMintAmount] = useState(1)
@@ -76,11 +76,11 @@ export default function Mint() {
 
       setPaused(await isPausedState())
       setIsPublicSale(await isPublicSaleState())
-      const isFreeSale = await isFreeSaleState()
-      setIsFreeSale(isFreeSale)
+      const isGenesisSale = await isGenesisSaleState()
+      setIsGenesisSale(isGenesisSale)
 
       setMaxMintAmount(
-        isFreeSale ? config.freesaleMaxMintAmount : config.maxMintAmount
+        isGenesisSale ? config.genesissaleMaxMintAmount : config.maxMintAmount
       )
     }
 
@@ -99,10 +99,10 @@ export default function Mint() {
     }
   }
 
-  const freesaleMintHandler = async () => {
+  const genesissaleMintHandler = async () => {
     setIsMinting(true)
 
-    const { success, status } = await freesaleMint(mintAmount)
+    const { success, status } = await genesissaleMint(mintAmount)
 
     setStatus({
       success,
@@ -153,8 +153,8 @@ export default function Mint() {
             <h2 className="mt-3 text-2xl font-bold text-transparent uppercase font-chewy md:text-2xl bg-gradient-to-br from-brand-purple to-brand-pink bg-clip-text">
               {paused
                 ? 'Mint Paused'
-                : isFreeSale
-                ? 'Free Mint'
+                : isGenesisSale
+                ? 'Genesis Mint'
                 : 'Public Mint'}
             </h2>
             <h3 className="text-sm tracking-widest text-brand-blue">
@@ -239,8 +239,8 @@ export default function Mint() {
                     <div className="flex items-center space-x-3">
                       <p>
                         {Number.parseFloat(
-                          isFreeSale
-                            ? config.freePrice * mintAmount
+                          isGenesisSale
+                            ? config.genesisPrice * mintAmount
                             : config.price * mintAmount
                         ).toFixed(2)}{' '}
                         ETH
@@ -260,7 +260,7 @@ export default function Mint() {
                     } font-chewy mt-12 w-full px-6 py-3 rounded-md text-2xl text-white  mx-4 tracking-wide uppercase`}
                     disabled={paused || isMinting}
                     onClick={
-                      isFreeSale ? freesaleMintHandler : publicMintHandler
+                      isGenesisSale ? genesissaleMintHandler : publicMintHandler
                     }
                   >
                     {isMinting ? 'Minting...' : 'Mint'}
