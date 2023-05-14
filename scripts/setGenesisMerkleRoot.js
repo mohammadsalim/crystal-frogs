@@ -32,11 +32,11 @@ async function main() {
   // Set the re-calculated merkle root to the contract.
   // Comment out root not being used
 
-  await nftContract.setGenesisMerkleRoot(genesisRoot)
-  // await nftContract.setMerkleRoot(root)
+  // await nftContract.setGenesisMerkleRoot(genesisRoot)
+  await nftContract.setMerkleRoot(root)
 
-  console.log('GenesisWhitelist root set to:', genesisRoot)
-  // console.log('Whitelist root set to:', root)
+  // console.log('GenesisWhitelist root set to:', genesisRoot)
+  console.log('Whitelist root set to:', root)
 }
 
 main()
